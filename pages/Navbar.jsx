@@ -6,7 +6,7 @@ const Navbar = () => {
   const img = [Image];
 
   return (
-    <nav>
+    <nav className="flex flex-row justify-around">
       {" "}
       <div>
         {" "}
@@ -18,7 +18,7 @@ const Navbar = () => {
           />
         </Link>{" "}
       </div>
-      <div>
+      <div className="flex flex-row justify-around">
         {" "}
         <div>
           <Link href="/">
@@ -37,6 +37,15 @@ const Navbar = () => {
             <button type="button">Resources</button>
           </Link>
         </div>{" "}
+        <div>
+          {" "}
+          <Link href="/">
+            <button type="button"> sign up</button>
+          </Link>
+          <Link href="/">
+            <button type="button"> sign in</button>
+          </Link>
+        </div>
       </div>
     </nav>
   );
