@@ -8,13 +8,17 @@ const Navbar = () => {
   return (
     <nav className="flex flex-row justify-between bg-primary  py-6 px-24 h-24 justify-items-center ">
       {" "}
-      <div className="w-16 h-16 flex-1">
+      <div className="w-2/4 h-20 relative">
         {" "}
         <Link href="./">
-          <img className="w-16 h-16 " src="./Logo.png" alt="animal profile " />
+          <img
+            className="w-16 h-16 absolute -top-2"
+            src="./Logo.png"
+            alt="animal profile "
+          />
         </Link>{" "}
       </div>
-      <div className="flex flex-row justify-around items-center flex-1">
+      <div className="flex flex-row justify-around items-center  w-2/4">
         {" "}
         <div className="">
           <Link href="/">
