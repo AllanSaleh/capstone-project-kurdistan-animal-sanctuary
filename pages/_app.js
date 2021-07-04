@@ -1,8 +1,10 @@
-import "../styles/index.css"
+import "../styles/index.css";
+import Navbar from "./Navbar";
 
 function MyApp({ Component, pageProps }) {
   return (
-      <Component {...pageProps} />
+    <Navbar />
+    // <Component {...pageProps} />
   );
 }
 
