@@ -33,7 +33,7 @@ const Navbar = () => (
         <Link href="./">
           <button
             type="button"
-            className="mr-3 w-28 h-10 text-primary bg-highlight rounded-lg "
+            className="mr-3 w-28 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
           >
             Sign up
           </button>
