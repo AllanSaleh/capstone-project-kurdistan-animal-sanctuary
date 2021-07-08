@@ -1,8 +1,9 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
+import PropTypes from "prop-types";
 
 const profileRating = ({ name, pic, rating }) => (
-  <div className="flex py-14 px-20 font-Quicksand">
+  <div className="flex py-14  font-Quicksand">
     <div className="flex flex-row ">
       <div className="w-64 h-64 rounded-full ">
         <img
@@ -39,5 +40,10 @@ const profileRating = ({ name, pic, rating }) => (
     </div>
   </div>
 );
+profileRating.propTypes = {
+  name: PropTypes.string.isRequired,
+  pic: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+};
 
 export default profileRating;
