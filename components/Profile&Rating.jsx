@@ -13,7 +13,7 @@ const profileRating = ({ name, pic, rating }) => (
         />
       </div>
       <div>
-        <div className="px-5 py-4 font-bold text-primary ">
+        <div className="px-5 py-4 font-bold text-primary text-2xl ">
           <div>{name}</div>
         </div>
         <div className=" inline-block w-72 h-8 p-5 pt-6">

@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileRating from "./Profile&Rating";
 import UserDescription from "./UserDescription";
+import UserAnimals from "./UserAnimals";
 
 const UserProfile = () => {
   const userdata = {
@@ -23,13 +24,14 @@ const UserProfile = () => {
   };
 
   return (
-    <div className=" px-20 font-Quicksand">
+    <div className=" px-36 font-Quicksand">
       <ProfileRating
         name={userdata.name}
         pic={userdata.pic}
         rating={userdata.rating}
       />
       <UserDescription about={userdata.about} />
+      <UserAnimals animals={userdata.animals} />
     </div>
   );
 };
