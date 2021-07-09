@@ -6,9 +6,9 @@ const ratingChanged = () => {};
 const profileRating = ({ name, pic, rating }) => (
   <div className="flex py-14  font-Quicksand">
     <div className="flex flex-row ">
-      <div className="w-64 h-64 rounded-full ">
+      <div className="w-72 h-72 rounded-full ">
         <img
-          className=" w-56 h-56 rounded-full"
+          className=" w-60 h-60 border-2 border-secondary p-2 rounded-full"
           src={pic}
           alt="animal profile "
         />
