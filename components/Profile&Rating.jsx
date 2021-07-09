@@ -2,6 +2,7 @@ import React from "react";
 import ReactStars from "react-rating-stars-component";
 import PropTypes from "prop-types";
 
+const ratingChanged = () => {};
 const profileRating = ({ name, pic, rating }) => (
   <div className="flex py-14  font-Quicksand">
     <div className="flex flex-row ">
@@ -23,13 +24,14 @@ const profileRating = ({ name, pic, rating }) => (
             size={54}
             color="#D1D1D1"
             activeColor="#ffd700"
+            onChange={ratingChanged}
           />
         </div>
       </div>
     </div>
     <div className="grid grid-flow-col w-4/5  ">
       <div className=" justify-self-end pt-12">
-        {/* do not know what the supposed functionality of this button is */}
+        {/*  functionality will be added latter when we have something we can actually use  */}
         <button
           type="button"
           className="mr-3 w-28 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
