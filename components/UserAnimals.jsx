@@ -45,7 +45,7 @@ const UserAnimals = ({ userid }) => {
             <Link href="./">
               <div className="rounded-lg cursor-pointer h-60">
                 <img
-                  className=" img-showcase rounded-lg w-full h-full"
+                  className=" rounded-lg w-full h-full"
                   src={item.imgPath}
                   alt="animal profile "
                 />
@@ -53,6 +53,13 @@ const UserAnimals = ({ userid }) => {
             </Link>
           </SwiperSlide>
         ))}
+        <SwiperSlide>
+          <div className="rounded-lg cursor-pointer h-60">
+            <button type="button" className="w-full h-full">
+              bb
+            </button>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );
