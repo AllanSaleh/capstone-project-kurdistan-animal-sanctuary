@@ -14,25 +14,25 @@ const UserAnimals = ({ userid }) => {
       {
         owner: userid,
         id: 2,
-        imgPath: "./profile.jpeg",
+        imgPath: "./testImages/profile.jpeg",
       },
       {
         id: 4,
-        imgPath: "./dog.jpeg",
+        imgPath: "./testImages/dog.jpeg",
       },
       {
         id: 4,
-        imgPath: "./cat1.jpeg",
+        imgPath: "./testImages/cat2.jpeg",
       },
       {
         id: 4,
-        imgPath: "./cat2.jpeg",
+        imgPath: "./testImages/cat1.jpeg",
       },
     ],
   };
   return (
-    <div className="py-5">
-      <h1 className="font-bold text-primary text-3xl pb-8">My Pets </h1>
+    <div className="py-12">
+      <h1 className="font-bold text-primary text-3xl pb-8">My Animals : </h1>
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -43,9 +43,9 @@ const UserAnimals = ({ userid }) => {
         {userpets.animals.map((item) => (
           <SwiperSlide>
             <Link href="./">
-              <div className="rounded-lg cursor-pointer">
+              <div className="rounded-lg cursor-pointer h-60">
                 <img
-                  className=" img-showcase rounded-lg"
+                  className=" img-showcase rounded-lg w-full h-full"
                   src={item.imgPath}
                   alt="animal profile "
                 />
