@@ -31,7 +31,7 @@ const UserAnimals = ({ userid }) => {
     ],
   };
   return (
-    <div className="py-12">
+    <div className="py-12 pb-20">
       <h1 className="font-bold text-primary text-3xl pb-8">My Animals : </h1>
       <Swiper
         slidesPerView={3}
