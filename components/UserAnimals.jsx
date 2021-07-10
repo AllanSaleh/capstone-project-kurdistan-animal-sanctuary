@@ -45,7 +45,7 @@ const UserAnimals = ({ userid }) => {
             <Link href="./">
               <div className="rounded-lg cursor-pointer h-60 border-2 border-secondary ">
                 <img
-                  className=" rounded-lg w-full h-full hover:bg-gray-300 object-cover "
+                  className=" rounded-md w-full h-full hover:bg-gray-300 object-cover "
                   src={item.imgPath}
                   alt="animal profile "
                 />
