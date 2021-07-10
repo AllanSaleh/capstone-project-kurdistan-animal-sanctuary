@@ -19,6 +19,9 @@ module.exports = {
         highlight: "#FFD400",
       },
     },
+    fontFamily: {
+      Quicksand: ["Quicksand"],
+    },
   },
   variants: {
     extend: {},

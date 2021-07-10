@@ -21,7 +21,7 @@ const PetShowcase = () => {
   ];
 
   return (
-    <section className="petshowcase bg-secondary ">
+    <section className="petshowcase bg-secondary font-Quicksand">
       <div className="px-24">
         <h1 className="text-center pt-6 pb-20 text-7xl font-bold text-primary">
           Make a Pet Happy
