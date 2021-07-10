@@ -21,7 +21,7 @@ const PetShowcase = () => {
   ];
 
   return (
-    <section className="petshowcase bg-secondary font-Quicksand">
+    <section className=" w-full h-5/6 pb-16 bg-secondary font-Quicksand">
       <div className="px-24">
         <h1 className="text-center pt-6 pb-20 text-7xl font-bold text-primary">
           Make a Pet Happy
@@ -29,9 +29,9 @@ const PetShowcase = () => {
         <div className="flex flex-row justify-around">
           {img.map((item) => (
             <Link href="./">
-              <div className="card relative rounded-lg cursor-pointer">
+              <div className="card h-80 w-80 mr-5 relative rounded-lg cursor-pointer">
                 <img
-                  className=" img-showcase rounded-lg"
+                  className="object-cover w-full h-full rounded-lg"
                   src={item["image-path"]}
                   alt="animal profile "
                 />
