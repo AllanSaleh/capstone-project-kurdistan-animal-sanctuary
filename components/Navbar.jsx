@@ -3,7 +3,7 @@ import Link from "next/link";
 import Navbutton from "./Navbutton";
 
 const Navbar = () => (
-  <nav className="flex flex-row bg-primary py-6 px-24 h-24 justify-items-center ">
+  <nav className="flex flex-row bg-primary py-6 px-24 h-24 justify-items-center font-Quicksand">
     <div className="w-2/4 mr-40 h-20 relative">
       <Link href="./">
         <img
