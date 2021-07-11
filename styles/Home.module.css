@@ -119,3 +119,8 @@
     flex-direction: column;
   }
 }
+
+.website_dark{
+  color:rgba(5, 102, 118, 1);
+  background-color: rgba(5, 102, 118, 1);
+}
