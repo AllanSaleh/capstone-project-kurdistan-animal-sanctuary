@@ -8,3 +8,47 @@
 .bgSize {
   background-size: contain;
 }
+.slider {
+  width: 50%;
+  margin: 2rem auto;
+  height: 200px;
+}
+.slide img {
+  width: 20rem;
+  margin: 0 auto;
+}
+.slide {
+  transform: scale(0.2);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+.activeSlide {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.arrow {
+  background-color: white;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow svg {
+  transition: color 300;
+}
+.arrow svg:hover {
+  color: #A3D2CA;
+}
+
+.next {
+  right: 0%;
+  top: 10%;
+}
+.prev {
+  left: 0%;
+  top: 10%;
+}
+.about{
+  left: 0%;
+  top: 10%
+}
