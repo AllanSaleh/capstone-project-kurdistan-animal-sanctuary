@@ -1,10 +1,11 @@
 import React from "react";
 import ProfileDetail from "./Profile&Detail";
 import AnimalInformation from "./AnimalInformation";
+import AnimalPictures from "./AnimalPictures";
 
 const AnimalProfile = () => {
   const animalData = {
-    userid: 2,
+    animalId: 2,
     name: "Zeus",
     pic: "./dog.jpeg",
     sex: "Male",
@@ -28,6 +29,7 @@ const AnimalProfile = () => {
         vaccinated={animalData.vaccinated}
       />
       <AnimalInformation about={animalData.about} whatILike={animalData.like} />
+      <AnimalPictures animalId={animalData.animalId} />
     </div>
   );
 };
