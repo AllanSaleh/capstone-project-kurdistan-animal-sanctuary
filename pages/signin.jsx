@@ -1,11 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 
 const Signin = () => (
-  <div className="bg-background h-screen bg-clip-content  ">
+  <div className="bg-background h-screen bg-clip-content bg-no-repeat  bg-cover flex">
     <backgroundImage />
-    <div className="m-auto bg-secondary bg-opacity-50 max-w-lg rounded ">
+    <div className="m-auto bg-secondary bg-opacity-80 max-w-lg rounded-xl text-center w-96 ">
       <div className="w-80 m-auto ">
         {/*  inputs + button */}
         <p className="text-primary text-5xl text-center font-Quicksand p-10">
