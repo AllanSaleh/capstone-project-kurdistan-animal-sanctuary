@@ -34,13 +34,3 @@ module.exports = {
   },
   plugins: [],
 };
-module.exports = {
-  theme: {
-    extend: {
-      backgroundImage: (theme) => ({
-        pet: "url('/public/Footer(1).png ')",
-        Logo: "url('/public/Header Logo.png')",
-      }),
-    },
-  },
-};
