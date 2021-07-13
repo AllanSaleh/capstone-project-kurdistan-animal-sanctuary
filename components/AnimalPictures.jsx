@@ -8,14 +8,14 @@ import "swiper/components/pagination/pagination.min.css";
 
 SwiperCore.use([Navigation]);
 
-const UserAnimals = ({ aimalId }) => {
+const UserAnimals = ({ animalID }) => {
   const animal = {
-    id: aimalId,
+    id: animalID,
     picture: ["./profile.jpeg", "./dog.jpeg", "./cat2.jpeg", "./cat1.jpeg"],
   };
   return (
     <div className="py-12 pb-20">
-      <h1 className="font-bold text-primary text-3xl pb-8">My Animals : </h1>
+      <h1 className="font-bold text-primary text-3xl pb-8">Pictures of me</h1>
       <Swiper
         slidesPerView={3}
         spaceBetween={40}
@@ -41,6 +41,6 @@ const UserAnimals = ({ aimalId }) => {
   );
 };
 UserAnimals.propTypes = {
-  aimalId: PropTypes.number.isRequired,
+  animalID: PropTypes.number.isRequired,
 };
 export default UserAnimals;
