@@ -1,11 +1,11 @@
 import React from "react";
-import Footer from "./Compononts/Footer";
+import SingUp from "./Compononts/SingUp";
 
 export default function Home() {
   // let name = 'Allan';
   return (
     <>
-      <Footer />
+      <SingUp />
     </>
   );
 }
