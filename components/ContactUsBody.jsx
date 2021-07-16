@@ -3,7 +3,7 @@ import React from "react";
 
 const contactUsBody = () => (
   <div className="flex flex-col items-center w-full">
-    <h1 className="text-center mt-10 text-7xl text-highlight">Contact uS</h1>
+    <h1 className="text-center mt-10 text-7xl text-highlight">Contact us</h1>
     <p className="text-center mt-12 text-primary">
       A House Without Animals is like a Garden Without Flowers
     </p>
@@ -46,7 +46,7 @@ const contactUsBody = () => (
           </label>
           <input
             className="border border-primary placeholder-primary rounded-2xl h-11 w-full lg:w-56 bg-secondary placeholder-opacity-100 pl-1.5 box-border outline-none"
-            type="number"
+            type="tel"
             placeholder="phone number"
           />
         </div>
