@@ -25,21 +25,19 @@ const contactUsBody = () => (
           />
         </div>
         <div className="flex flex-col">
-          <label
-            htmlFor="FullName"
-            className="pl-1.5 text-primary text-xl mb-1"
-          >
+          <label htmlFor="email" className="pl-1.5 text-primary text-xl mb-1">
             Email
           </label>
           <input
             className="border border-primary placeholder-primary rounded-2xl h-11 w-full lg:w-56 bg-secondary placeholder-opacity-100 pl-1.5 box-border outline-none"
             type="email"
+            id="email"
             placeholder="Email address"
           />
         </div>
         <div className="flex flex-col">
           <label
-            htmlFor="FullName"
+            htmlFor="phoneNumber"
             className="pl-1.5 text-primary text-xl mb-1"
           >
             Phone number
@@ -47,6 +45,7 @@ const contactUsBody = () => (
           <input
             className="border border-primary placeholder-primary rounded-2xl h-11 w-full lg:w-56 bg-secondary placeholder-opacity-100 pl-1.5 box-border outline-none"
             type="tel"
+            id="phoneNumber"
             placeholder="phone number"
           />
         </div>
