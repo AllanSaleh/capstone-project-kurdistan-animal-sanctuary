@@ -2,11 +2,11 @@
 import React from "react";
 import animalCardData from "../mockData/AnimalCardData";
 
-const animalCard = () => (
-  <div>
+const AnimalCard = () => (
+  <div className="flex flex-row w-full h-full flex-wrap justify-evenly mt-1">
     {animalCardData.map((animal) => (
       <a href="#">
-        <div className="border border-black flex flex-col w-40 rounded-md items-center h-48">
+        <div className="border border-black flex flex-col w-40 rounded-md items-center h-48 m-1">
           <img className="w-40 h-28 rounded-md" src={animal.imgURL} alt="" />
           <p className="mt-2.5">{animal.name}</p>
           <div>
@@ -19,4 +19,4 @@ const animalCard = () => (
   </div>
 );
 
-export default animalCard;
+export default AnimalCard;
