@@ -22,11 +22,11 @@ const PetShowcase = () => {
 
   return (
     <section className=" w-full h-5/6 pb-16 bg-secondary font-Quicksand">
-      <div className="px-20 md:px-24">
-        <h1 className="text-center pt-6 pb-10 text-2xl  font-bold text-primary md:text-7xl ">
+      <div className="">
+        <h1 className="text-center mx-auto pt-6 pb-10 text-3xl w-72 font-bold text-primary md:text-7xl ">
           Make a Pet Happy
         </h1>
-        <div className="flex flex-col justify-around items-center  md:flex-row">
+        <div className="flex flex-col justify-around items-center px-20 md:px-24 md:flex-row">
           {img.map((item) => (
             <Link href="./">
               <div className="card h-48 w-48 py-5  relative rounded-lg cursor-pointer md:h-80 md:w-80 md:mr-5 ">
