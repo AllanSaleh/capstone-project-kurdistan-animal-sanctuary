@@ -2,21 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ProfileDetail = ({ name, pic, sex, age, vaccinated, shelter }) => (
-  <div className="flex py-14  ">
-    <div className="flex flex-row ">
-      <div className="w-72 h-72 rounded-full ">
+  <div className="flex flex-wrap md:flex-nowrap  py-14 ">
+    <div className="block md:flex md:flex-row ">
+      <div className=" w-40 md:w-72 h-40 md:h-72 ml-5 rounded-full">
         <img
-          className=" w-60 h-60 border-2 border-secondary p-2 rounded-full"
+          className="  w-36 md:w-60 h-36 md:h-60 border-2 border-secondary p-2 rounded-full"
           src={pic}
           alt="animal profile "
         />
       </div>
       <div>
-        <div className=" ">
-          <div className="px-5 py-4 pb-5 font-bold text-primary text-2xl ">
+        <div className="w-48 ">
+          <div className="px-5 py-4 font-bold text-primary text-2xl">
             {name}
           </div>
-          <div className="flex flex row text-xl text-gray-700 text-opacity-50 font-medium">
+          <div className="flex flex row text-md md:text-xl text-gray-700 text-opacity-50 font-medium">
             <div className="pl-5  ">
               <ul>
                 <li className="pb-5 ">Sex</li>
@@ -38,7 +38,7 @@ const ProfileDetail = ({ name, pic, sex, age, vaccinated, shelter }) => (
       </div>
     </div>
     <div className="grid grid-flow-col w-4/5  ">
-      <div className=" justify-self-end pt-12">
+      <div className=" justify-self-end pt-5 md:pt-12">
         {/*  functionality will be added latter when we have something we can actually use  */}
         <button
           type="button"
