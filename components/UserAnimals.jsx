@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import "./swiper.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper/core";
 import "swiper/swiper.min.css";
@@ -34,8 +35,16 @@ const UserAnimals = ({ userid }) => {
     <div className="py-12 pb-20">
       <h1 className="font-bold text-primary text-3xl pb-8">My Animals : </h1>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={40}
+        breakpoints={{
+          // when window width is >= 640px
+          640: {
+            width: 640,
+            slidesPerView: 3,
+            spaceBetween: 150,
+          },
+        }}
+        slidesPerView={2}
+        spaceBetween={10}
         pagination={{
           clickable: true,
         }}
@@ -43,7 +52,7 @@ const UserAnimals = ({ userid }) => {
         {userpets.animals.map((item) => (
           <SwiperSlide>
             <Link href="./">
-              <div className="rounded-lg cursor-pointer h-60 border-2 border-secondary ">
+              <div className="  rounded-lg cursor-pointer h-40 w-40 md:w-60 md:h-60 border-2  border-secondary ">
                 <img
                   className=" rounded-md w-full h-full hover:bg-gray-300 object-cover "
                   src={item.imgPath}
@@ -54,7 +63,7 @@ const UserAnimals = ({ userid }) => {
           </SwiperSlide>
         ))}
         <SwiperSlide>
-          <div className="rounded-lg cursor-pointer h-60 border-2 border-secondary ">
+          <div className="rounded-lg cursor-pointer h-40 w-40 md:w-60 md:h-60 border-2 border-secondary ">
             <button
               type="button"
               className=" w-full h-full font-bold rounded-lg border-b-2 bg-gray-200 hover:bg-gray-300 text-secondary flex items-center justify-center"
