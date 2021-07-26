@@ -25,14 +25,16 @@ const UserProfile = () => {
   };
 
   return (
-    <div className=" px-36 font-Quicksand">
-      <ProfileRating
-        name={userdata.name}
-        pic={userdata.pic}
-        rating={userdata.rating}
-      />
-      <UserDescription about={userdata.about} />
-      <UserAnimals animals={userdata.userid} />
+    <div>
+      <div className=" w-full px-7 md:px-36 font-Quicksand">
+        <ProfileRating
+          name={userdata.name}
+          pic={userdata.pic}
+          rating={userdata.rating}
+        />
+        <UserDescription about={userdata.about} />
+        <UserAnimals animals={userdata.userid} />
+      </div>
     </div>
   );
 };
