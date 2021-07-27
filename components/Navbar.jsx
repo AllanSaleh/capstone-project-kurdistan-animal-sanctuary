@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import LoginandLanguage from "./LoginandLanguage";
 import MobileMenu from "./MobileMenu";
 import Navbutton from "./Navbutton";
 
@@ -26,31 +27,18 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <div className="flex flex-row md:justify-end items-center w-2/4 md:justify-around md:items-center">
+        <div className="flex flex-row  items-center w-2/4 md:justify-around md:items-center">
           <div className="  float-right whitespace-nowrap hidden md:inline-block">
-            <Navbutton name="Home" link="./" />
-            <Navbutton name="About" link="./" />
-            <Navbutton name="Contact" link="./" />
-            <Navbutton name="Adopt" link="./" />
-            <Navbutton name="Resources" link="./" />
-
-            <Link href="./">
-              <button
-                type="button"
-                className="mr-3.5 w-28 h-10 text-highlight border-2 border-highlight rounded-lg "
-              >
-                Login
-              </button>
-            </Link>
-            <Link href="./">
-              <button
-                type="button"
-                className="mr-3 w-28 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
-              >
-                Sign up
-              </button>
-            </Link>
+            <span>
+              <Navbutton name="Home" link="./" />
+              <Navbutton name="About" link="./" />
+              <Navbutton name="Contact" link="./" />
+              <Navbutton name="Adopt" link="./" />
+              <Navbutton name="Resources" link="./" />
+            </span>
+            <LoginandLanguage />
           </div>
+
           <div className="inline-block  float-right whitespace-nowrap md:hidden items-center justify-center">
             <button
               type="button"
