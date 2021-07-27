@@ -16,21 +16,28 @@ const login = () => {
       <span
         className={
           logState === true
-            ? "inline-block  absolute md:top-4  ml-4 cursor-pointer right-20 md:right-auto md:w-16 md:h-16"
+            ? "inline-block  absolute sm:top-4  ml-4 cursor-pointer right-20 sm:right-auto sm:w-16 sm:h-16"
             : "hidden"
         }
       >
         <Link href="./">
-          <img
-            className="w-16 h-16  cursor-pointer  rounded-full   "
-            src="./profile.png"
-            alt="Website logo "
-          />
+          <button
+            type="button"
+            onClick={() => {
+              Logging();
+            }}
+          >
+            <img
+              className="w-16 h-16  cursor-pointer  rounded-full   "
+              src="./profile.png"
+              alt="Website logo "
+            />
+          </button>
         </Link>
       </span>
       <span
         className={
-          logState === true ? "hidden" : "block mt-7 md:inline-block md:mt-0 "
+          logState === true ? "hidden" : "block mt-7 sm:inline-block sm:mt-0 "
         }
       >
         <Link href="./">
@@ -56,8 +63,8 @@ const login = () => {
       <span
         className={
           logState === true
-            ? "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-20 md:mt-0 ml-24 md:ml-24"
-            : "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 md:mt-0 ml-24  md:ml-14"
+            ? "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-20 sm:mt-0 ml-24 sm:ml-24"
+            : "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 sm:mt-0 ml-24  sm:ml-14"
         }
       >
         <button
