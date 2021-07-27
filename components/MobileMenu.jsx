@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import PropTypes from "prop-types";
+import LoginandLanguage from "./LoginandLanguage";
 import Navbutton from "./Navbutton";
 
 const MobileMenu = ({ state }) => (
@@ -23,24 +23,7 @@ const MobileMenu = ({ state }) => (
           <Navbutton name="Resources" link="./" />
         </li>
       </ul>
-      <div className=" w-full flex items-center">
-        <Link href="./">
-          <button
-            type="button"
-            className="mr-3.5 w-20 h-10 text-highlight border-2 border-highlight rounded-lg "
-          >
-            Login
-          </button>
-        </Link>
-        <Link href="./">
-          <button
-            type="button"
-            className="mr-3 w-20 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
-          >
-            Sign up
-          </button>
-        </Link>
-      </div>
+      <LoginandLanguage />
     </div>
   </div>
 );

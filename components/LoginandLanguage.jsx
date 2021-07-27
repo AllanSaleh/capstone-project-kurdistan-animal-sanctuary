@@ -16,19 +16,23 @@ const login = () => {
       <span
         className={
           logState === true
-            ? "inline-block w-12 h-12 absolute top-6 ml-4 cursor-pointer md:w-16 md:h-16"
+            ? "inline-block  absolute md:top-4  ml-4 cursor-pointer right-20 md:right-auto md:w-16 md:h-16"
             : "hidden"
         }
       >
         <Link href="./">
           <img
-            className="w-12 h-12  cursor-pointer  rounded-full"
+            className="w-16 h-16  cursor-pointer  rounded-full   "
             src="./profile.png"
             alt="Website logo "
           />
         </Link>
       </span>
-      <span className={logState === true ? "hidden" : ""}>
+      <span
+        className={
+          logState === true ? "hidden" : "block mt-7 md:inline-block md:mt-0 "
+        }
+      >
         <Link href="./">
           <button
             type="button"
@@ -52,8 +56,8 @@ const login = () => {
       <span
         className={
           logState === true
-            ? "bg-secondary text-sm text-white leading-none  rounded-full inline-flex ml-20"
-            : "bg-secondary text-sm text-white leading-none  rounded-full inline-flex ml-10"
+            ? "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-20 md:mt-0 ml-24 md:ml-24"
+            : "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 md:mt-0 ml-24  md:ml-14"
         }
       >
         <button

@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="flex flex-row-reverse  md:flex-row bg-primary py-6 px-2 h-20 md:h-24 justify-items-center font-Quicksand">
+      <nav className="flex flex-row-reverse  md:flex-row bg-primary  py-6 px-2 h-20 md:h-24 justify-items-center font-Quicksand">
         <div className="w-2/4  h-14 relative md:h-20">
           <Link href="./">
             <img
