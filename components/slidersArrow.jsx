@@ -7,7 +7,7 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 export const NextArrow = ({ onClick }) => (
   <button
     type="button"
-    className="arrow next z-10 absolute top-2/4 cursor-pointer"
+    className="arrow next z-10 absolute cursor-pointer"
     onClick={onClick}
   >
     <FontAwesomeIcon icon={faAngleRight} />
@@ -17,7 +17,7 @@ export const NextArrow = ({ onClick }) => (
 const PrevArrow = ({ onClick }) => (
   <button
     type="button"
-    className="arrow prev z-10 absolute top-2/4 cursor-pointer"
+    className="arrow prev z-10 absolute cursor-pointer"
     onClick={onClick}
   >
     <FontAwesomeIcon icon={faAngleLeft} />
