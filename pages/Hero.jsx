@@ -4,10 +4,11 @@ import "../styles/Home.module.css";
 function Hero() {
   return (
     <div>
-      <div className=" flex flex-row absolute z-1">
+      <img src="/paw.png" alt="paw" className="right-0 absolute z-0" />
+      <div className=" flex flex-row absolute z-1 opacity-0 md:opacity-100">
         <img src="/cat.png" alt="cat" />
       </div>
-      <div className=" text-center mt-32 z-20 right-0 absolute tracking-widest text-3xl px-20 z-4">
+      <div className=" text-center mt-32 z-20 right-0 absolute tracking-widest text-3xl px-0 md:px-20 z-4">
         <p className="font-black uppercase text-primary text-5xl mb-8 ">
           Make a pet happy
         </p>
@@ -19,7 +20,6 @@ function Hero() {
           Go to Adoption page{" "}
         </button>
       </div>
-      <img src="/paw.png" alt="paw" className="right-0 absolute z-10" />
     </div>
   );
 }
