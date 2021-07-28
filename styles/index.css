@@ -24,9 +24,11 @@
 }
 
 .next {
+  top: 50%;
   right: 5%;
 }
 
 .prev {
+  top: 50%;
   left: 5%;
 }
