@@ -1,7 +1,8 @@
 import React from "react";
-import PetShowcase from "../components/PetShowcase";
+
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   // let name = 'Allan';
-  return <PetShowcase />;
+  return <Navbar />;
 }
