@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 
-const contactUsBody = () => (
+const ContactUsBody = () => (
   <div className="flex flex-col items-center w-full">
     <h1 className="text-center mt-10 text-7xl text-highlight">Contact us</h1>
     <p className="text-center mt-12 text-primary">
@@ -66,4 +66,4 @@ const contactUsBody = () => (
   </div>
 );
 
-export default contactUsBody;
+export default ContactUsBody;
