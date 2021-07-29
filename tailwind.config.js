@@ -21,7 +21,6 @@ module.exports = {
       },
       borderColor: (theme) => ({
         ...theme("colors"),
-
         primary: "#056676",
         secondary: "#A3D2CA",
         highlight: "#FFD400",
@@ -32,7 +31,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["active"],
+      textColor: ["active"],
+      borderColor: ["active"],
+    },
   },
   plugins: [],
 };
