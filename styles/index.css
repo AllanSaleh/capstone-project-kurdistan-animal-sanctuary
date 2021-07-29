@@ -2,3 +2,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sliderImg,
+.slider,
+.imgContainer {
+  height: 520px;
+  width: 100%;
+}
+
+.summary {
+  top: 70%;
+  color: white;
+}
+
+.arrow {
+  color: #a3d2ca;
+  transform: scale(4.5);
+}
+
+.arrow:hover {
+  color: #056676;
+}
+
+.next {
+  top: 50%;
+  right: 5%;
+}
+
+.prev {
+  top: 50%;
+  left: 5%;
+}
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");

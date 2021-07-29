@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
     enabled: true,
-    content: ["./pages/**/*.jsx", "./Components/**/*.{js,ts,jsx,tsx}"],
+    content: ["./pages/**/*.jsx", "./components/**/*.{js,ts,jsx,tsx}"],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -30,7 +30,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["active"],
+      textColor: ["active"],
+      borderColor: ["active"],
+    },
   },
   plugins: [],
 };
