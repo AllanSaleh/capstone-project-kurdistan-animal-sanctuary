@@ -3,8 +3,8 @@ import React from "react";
 const Signin = () => (
   <div className="bg-background h-screen bg-clip-content bg-no-repeat  bg-cover flex">
     <backgroundImage />
-    <div className="m-auto bg-secondary bg-opacity-80 max-w-lg rounded-xl text-center w-96 ">
-      <div className="w-80 m-auto ">
+    <div className="m-auto bg-secondary bg-opacity-80 max-w-lg rounded-xl text-center w-80 md:w-96">
+      <div className="w-60 md:w-80 m-auto ">
         {/*  inputs + button */}
         <p className="text-primary text-5xl text-center font-Quicksand p-10">
           Sign In
@@ -21,8 +21,8 @@ const Signin = () => (
           />
         </div>
 
-        <input type="checkbox" name="membrme" className="mb-4" />
         <label htmlFor="membrme" className="text-primary">
+          <input type="checkbox" name="membrme" className="mb-4" />
           Remember me
         </label>
 
@@ -33,11 +33,11 @@ const Signin = () => (
           Sign In
         </button>
       </div>
-      <div className="text-center  ">
+      <div className="text-center ">
         {/*  facebook + google + remaining text */}
-        <div className="flex flex-row items-center justify-center">
+        <div className="flex justify-evenly ">
           <span>
-            <a href="http://www.facebook.com">
+            <a href="https://twitter.com/">
               <img
                 alt="fb"
                 className="w-10 "
@@ -45,7 +45,16 @@ const Signin = () => (
               />
             </a>
           </span>
-          <span className="ml-10" />
+          <span>
+            <a href="http://www.facebook.com">
+              <img
+                alt="twitter"
+                className="w-10 "
+                src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png"
+              />
+            </a>
+          </span>
+
           <span>
             <a href="http://google.com">
               <img
@@ -56,8 +65,10 @@ const Signin = () => (
             </a>
           </span>
         </div>
-        <a href="forgetpassword">Forget password?</a> <br />
-        <a href="signup">Don't have an account yet?</a>
+        <div className="py-5">
+          <a href="forgetpassword">Forget password?</a> <br />
+          <a href="signup">you dont have an account yet?</a>
+        </div>
       </div>
     </div>
   </div>
