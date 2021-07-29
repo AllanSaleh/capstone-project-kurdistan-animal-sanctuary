@@ -11,8 +11,9 @@ module.exports = {
         primary: "#056676",
         secondary: "#A3D2CA",
         highlight: "#FFD400",
-        darken: "#E6BF00",
+        darken: "#e6bf00",
       }),
+
       textColor: {
         primary: "#056676",
         secondary: "#A3D2CA",
