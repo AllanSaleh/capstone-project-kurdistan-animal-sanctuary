@@ -28,9 +28,14 @@ module.exports = {
     fontFamily: {
       Quicksand: ["Quicksand"],
     },
+
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["active"],
+      textColor: ["active"],
+      borderColor: ["active"],
+    },
   },
   plugins: [],
 };
