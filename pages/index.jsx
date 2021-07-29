@@ -1,11 +1,12 @@
 import React from "react";
-import UserProfile from "../components/UserProfile";
+
+import AnimalOfWeek from "../components/AnimalOfWeek";
 
 export default function Home() {
   // let name = 'Allan';
   return (
-    <div>
-      <UserProfile />
-    </div>
+    <>
+      <AnimalOfWeek />
+    </>
   );
 }
