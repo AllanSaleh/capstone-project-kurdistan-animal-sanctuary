@@ -1,8 +1,7 @@
 import React from "react";
-
-import AnimalProfile from "../components/AnimalProfile";
+import PetShowcase from "../components/PetShowcase";
 
 export default function Home() {
   // let name = 'Allan';
-  return <AnimalProfile />;
+  return <PetShowcase />;
 }
