@@ -1,5 +1,8 @@
 module.exports = {
-  purge: { enabled: true, content: ["./pages/**/*.jsx"] },
+  purge: {
+    enabled: true,
+    content: ["./pages/**/*.jsx", "./components/**/*.{js,ts,jsx,tsx}"],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -25,9 +28,17 @@ module.exports = {
         highlight: "#FFD400",
       }),
     },
+    fontFamily: {
+      Quicksand: ["Quicksand"],
+    },
+
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["active"],
+      textColor: ["active"],
+      borderColor: ["active"],
+    },
   },
   plugins: [],
 };
