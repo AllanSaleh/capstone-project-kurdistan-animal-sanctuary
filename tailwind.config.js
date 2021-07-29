@@ -6,6 +6,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: () => ({
+        background: "url('../public/bg.png')",
+      }),
       backgroundColor: (theme) => ({
         ...theme("colors"),
         primary: "#056676",
@@ -30,7 +33,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["active"],
+      textColor: ["active"],
+      borderColor: ["active"],
+    },
   },
   plugins: [],
 };
