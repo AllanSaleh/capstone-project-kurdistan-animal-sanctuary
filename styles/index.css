@@ -8,7 +8,7 @@
 .bgSize {
   background-size: contain;
 }
-.slider {
+.slider1 {
   width: 50%;
   margin: 2rem auto;
   height: 200px;
@@ -22,29 +22,29 @@
   transition: transform 300ms;
   opacity: 0.5;
 }
-.activeSlide {
+.activeSlide1 {
   transform: scale(1.1);
   opacity: 1;
 }
 
-.arrow {
+.arrow1 {
   background-color: white;
   position: absolute;
   cursor: pointer;
   z-index: 10;
 }
-.arrow svg {
+.arrow1 svg {
   transition: color 300;
 }
-.arrow svg:hover {
+.arrow1 svg:hover {
   color: #A3D2CA;
 }
 
-.next {
+.next1 {
   right: 0%;
   top: 10%;
 }
-.prev {
+.prev1 {
   left: 0%;
   top: 10%;
 }
@@ -52,3 +52,35 @@
   left: 0%;
   top: 10%
 }
+
+.sliderImg,
+.slider,
+.imgContainer {
+  height: 520px;
+  width: 100%;
+}
+
+.summary {
+  top: 70%;
+  color: white;
+}
+
+.arrow {
+  color: #a3d2ca;
+  transform: scale(4.5);
+}
+
+.arrow:hover {
+  color: #056676;
+}
+
+.next {
+  top: 50%;
+  right: 5%;
+}
+
+.prev {
+  top: 50%;
+  left: 5%;
+}
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
