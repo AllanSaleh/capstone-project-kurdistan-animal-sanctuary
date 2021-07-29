@@ -28,7 +28,6 @@ module.exports = {
     fontFamily: {
       Quicksand: ["Quicksand"],
     },
-
   },
   variants: {
     extend: {
