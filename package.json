@@ -12,15 +12,23 @@
     "test-all": "npm run format && npm run check-lint && npm run build"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "firebase": "^8.6.8",
     "i18next": "^20.3.2",
     "next": "11.0.1",
+    "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
+    "react-rating-stars-component": "^2.2.0",
+    "swiper": "^6.7.5",
     "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
-    "eslint": "^7.29.0",
+    "eslint": "^7.30.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
