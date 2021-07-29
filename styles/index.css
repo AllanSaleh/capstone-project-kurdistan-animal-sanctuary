@@ -18,8 +18,8 @@
   margin: 0 auto;
 }
 .slide {
-  transform: scale(0.2);
-  transition: transform 300ms;
+  transform: scale(0.4);
+  transition: transform 600ms;
   opacity: 0.5;
 }
 .activeSlide1 {
@@ -28,7 +28,7 @@
 }
 
 .arrow1 {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   position: absolute;
   cursor: pointer;
   z-index: 10;
@@ -37,26 +37,26 @@
   transition: color 300;
 }
 .arrow1 svg:hover {
-  color: #A3D2CA;
+  color: #a3d2ca;
 }
 
 .next1 {
   right: 0%;
-  top: 10%;
+  top: 20%;
 }
 .prev1 {
   left: 0%;
-  top: 10%;
+  top: 20%;
 }
-.about{
+.about {
   left: 0%;
-  top: 10%
+  top: 10%;
 }
 
 .sliderImg,
 .slider,
 .imgContainer {
-  height: 520px;
+  height: 320px;
   width: 100%;
 }
 

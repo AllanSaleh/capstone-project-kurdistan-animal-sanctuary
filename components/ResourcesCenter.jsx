@@ -69,13 +69,17 @@ const shelterImg = [
 
 export default function ResourceCenter() {
   const NextArrow = ({ onClick }) => (
-    <div className="arrow next" onClick={onClick}>
+    <div className="top-1/3 right-0 arrow1 bg-transparent" onClick={onClick}>
       <FaArrowRight />
     </div>
   );
 
   const PrevArrow = ({ onClick }) => (
-    <div className="arrow prev" onClick={onClick} aria-hidden="true">
+    <div
+      className="top-1/3 left-0 arrow1 bg-transparent "
+      onClick={onClick}
+      aria-hidden="true"
+    >
       <FaArrowLeft />
     </div>
   );
@@ -84,22 +88,35 @@ export default function ResourceCenter() {
 
   const settings = {
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
     lazyLoad: true,
     speed: 300,
     slidesToShow: 3,
     centerMode: true,
     centerPadding: 0,
+    pauseOnHover: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+
     beforeChange: (current, next) => setImageIndex(next),
   };
 
   return (
-    <div className="block px-20">
+    <div className="block px-4 md:px-20">
       <h1 className="font-extrabold text-center pt-16 pb-5 text-Quicksand text-3xl text-primary">
         RESOURCES CENTER
       </h1>
-      <p className="text-center p-6 text-secondary font-bold">
+      <p className="text-center p-4 md:p-6 text-secondary font-bold w-full">
         lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit
         amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem
         ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem
@@ -112,18 +129,29 @@ export default function ResourceCenter() {
         amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem
         ipsum dolor lorem ipsum dolor sit amet lorem
       </p>
-      <h1 className="font-bold text-center font-Quicksand   text-primary pt-6">
+      <h1 className="text-xl font-bold text-center font-Quicksand   text-primary pt-6 pb-10">
         Find Shelters We Work With
       </h1>
 
-      <Slider className="slider" {...settings}>
+      <Slider className="slider w-4/5" {...settings}>
         {shelterImg.map((img, idx) => (
-          <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-            <img src={img.picture.src} alt={img} />
+          <div
+            className={
+              idx === imageIndex
+                ? " activeSlide w-52 md:w-64 h-52 md:h-64 rounded-lg"
+                : " slide rounded-lg"
+            }
+          >
+            <img
+              src={img.picture.src}
+              alt={img}
+              className=" w-full h-full hover:bg-gray-300 object-cover"
+            />
           </div>
         ))}
       </Slider>
-      <div className="text-center font-bold	 text-secondary font-Quicksand m-16 ">
+
+      <div className="text-center font-bold	 text-secondary font-Quicksand mb-16 mt-1 ">
         {shelterImg[imageIndex].about}
       </div>
     </div>
