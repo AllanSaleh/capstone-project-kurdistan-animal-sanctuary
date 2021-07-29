@@ -11,20 +11,30 @@ module.exports = {
         primary: "#056676",
         secondary: "#A3D2CA",
         highlight: "#FFD400",
+        darken: "#E6BF00",
       }),
-
       textColor: {
         primary: "#056676",
         secondary: "#A3D2CA",
         highlight: "#FFD400",
       },
+      borderColor: (theme) => ({
+        ...theme("colors"),
+        primary: "#056676",
+        secondary: "#A3D2CA",
+        highlight: "#FFD400",
+      }),
     },
     fontFamily: {
       Quicksand: ["Quicksand"],
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["active"],
+      textColor: ["active"],
+      borderColor: ["active"],
+    },
   },
   plugins: [],
 };
