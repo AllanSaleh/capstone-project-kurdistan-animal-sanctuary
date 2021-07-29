@@ -1,8 +1,11 @@
 import React from "react";
-
-import Navbar from "../components/Navbar";
+import SingUp from "./Compononts/SingUp";
 
 export default function Home() {
   // let name = 'Allan';
-  return <Navbar />;
+  return (
+    <>
+      <SingUp />
+    </>
+  );
 }
