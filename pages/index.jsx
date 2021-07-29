@@ -1,11 +1,12 @@
 import React from "react";
-import SingUp from "./Compononts/SingUp";
+
+import WhyAdopt from "../components/WhyAdopt";
 
 export default function Home() {
   // let name = 'Allan';
   return (
     <>
-      <SingUp />
+      <WhyAdopt />
     </>
   );
 }
