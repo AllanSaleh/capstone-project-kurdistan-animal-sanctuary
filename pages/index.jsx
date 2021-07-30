@@ -1,12 +1,11 @@
 import React from "react";
-
-import AnimalOfWeek from "../components/AnimalOfWeek";
+import Footer from "./Compononts/Footer";
 
 export default function Home() {
   // let name = 'Allan';
   return (
     <>
-      <AnimalOfWeek />
+      <Footer />
     </>
   );
 }
