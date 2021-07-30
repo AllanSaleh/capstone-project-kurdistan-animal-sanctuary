@@ -11,7 +11,7 @@ const animalCardData = [
   {
     name: "mr.kitten",
     petType: "cat",
-    gender: "female",
+    gender: "fe",
     breed: "",
     size: "big",
     imgURL:
@@ -38,7 +38,7 @@ const animalCardData = [
   {
     name: "mr.kitten",
     petType: "cat",
-    gender: "female",
+    gender: "fe",
     breed: "small",
     size: "",
     imgURL:
@@ -65,7 +65,7 @@ const animalCardData = [
   {
     name: "mr.kitten",
     petType: "cat",
-    gender: "female",
+    gender: "fe",
     size: "small",
     breed: "",
     imgURL:
@@ -92,7 +92,7 @@ const animalCardData = [
   {
     name: "mr.kitten",
     petType: "cat",
-    gender: "female",
+    gender: "fe",
     size: "small",
     breed: "",
     imgURL:
@@ -119,7 +119,7 @@ const animalCardData = [
   {
     name: "mr.kitten",
     petType: "cat",
-    gender: "female",
+    gender: "fe",
     size: "small",
     breed: "",
     imgURL:

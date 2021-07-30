@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: () => ({
         background: "url('../public/bg.png')",
+        adopt_perfect_pet_header: "url('/images/bg.png')",
       }),
       backgroundColor: (theme) => ({
         ...theme("colors"),
@@ -27,9 +28,6 @@ module.exports = {
         secondary: "#A3D2CA",
         highlight: "#FFD400",
       }),
-      backgroundImage: {
-        adopt_perfect_pet_header: "url('/images/bg.png')",
-      },
       outline: {
         primary: ["2px solid #056676", "-2px"],
       },

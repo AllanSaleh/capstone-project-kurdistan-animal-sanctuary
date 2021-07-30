@@ -82,7 +82,7 @@ const AdoptThePerfectPet = () => {
             className="border-primary border focus:outline-none focus:ring focus:border-primary"
             onChange={searching}
           >
-            <option value="female">female</option>
+            <option value="fe">female</option>
             <option value="male">male</option>
           </select>
           <label htmlFor="color" className="mt-1">

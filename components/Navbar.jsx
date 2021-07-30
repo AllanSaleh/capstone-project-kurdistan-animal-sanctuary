@@ -33,7 +33,7 @@ const Navbar = () => {
               <Navbutton name="Home" link="./" />
 
               <Navbutton name="Contact" link="./ContactUs" />
-              <Navbutton name="Adopt" link="./" />
+              <Navbutton name="Adopt" link="./AdoptThePerfectPet" />
               <Navbutton name="Resources" link="./Resource" />
             </span>
             <LoginandLanguage />
