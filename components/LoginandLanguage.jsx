@@ -40,7 +40,7 @@ const login = () => {
           logState === true ? "hidden" : "block mt-7 sm:inline-block sm:mt-0 "
         }
       >
-        <Link href="./">
+        <Link href="./Signin">
           <button
             type="button"
             className="mr-3.5 w-28 h-10 text-highlight border-2 border-highlight rounded-lg "
