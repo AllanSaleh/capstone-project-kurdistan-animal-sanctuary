@@ -28,7 +28,7 @@ const PetShowcase = () => {
         </h1>
         <div className="flex flex-col justify-around items-center px-20 md:px-24 md:flex-row">
           {img.map((item) => (
-            <Link href="./">
+            <Link href="./AnimalProfile">
               <div className="card h-48 w-48 py-5  relative rounded-lg cursor-pointer md:h-80 md:w-80 md:mr-5 ">
                 <img
                   className="object-cover w-full h-full rounded-lg"

@@ -1,9 +1,6 @@
 import React from "react";
 
-import Image from "next/image";
-
 import Link from "next/link";
-import catPhoto from "../public/Group 790.png";
 
 export default function AnimalOfWeek() {
   return (

@@ -51,7 +51,7 @@ const UserAnimals = ({ userid }) => {
       >
         {userpets.animals.map((item) => (
           <SwiperSlide>
-            <Link href="./">
+            <Link href="./AnimalProfile">
               <div className="  rounded-lg cursor-pointer h-40 w-40 md:w-60 md:h-60 border-2  border-secondary ">
                 <img
                   className=" rounded-md w-full h-full hover:bg-gray-300 object-cover "

@@ -20,7 +20,7 @@ const login = () => {
             : "hidden"
         }
       >
-        <Link href="./">
+        <Link href="./UserProfile">
           <button
             type="button"
             onClick={() => {
@@ -40,7 +40,7 @@ const login = () => {
           logState === true ? "hidden" : "block mt-7 sm:inline-block sm:mt-0 "
         }
       >
-        <Link href="./">
+        <Link href="./Signin">
           <button
             type="button"
             className="mr-3.5 w-28 h-10 text-highlight border-2 border-highlight rounded-lg "
@@ -51,7 +51,7 @@ const login = () => {
             Login
           </button>
         </Link>
-        <Link href="./">
+        <Link href="./Signup">
           <button
             type="button"
             className=" w-28 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
@@ -64,7 +64,7 @@ const login = () => {
         className={
           logState === true
             ? "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-20 sm:mt-0 ml-24 sm:ml-24"
-            : "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 sm:mt-0 ml-24  sm:ml-14"
+            : "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 mb-4 md:mb-0 sm:mt-0 ml-24  sm:ml-14"
         }
       >
         <button

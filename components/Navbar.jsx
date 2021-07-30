@@ -31,10 +31,10 @@ const Navbar = () => {
           <div className="  float-right whitespace-nowrap hidden md:inline-block">
             <span>
               <Navbutton name="Home" link="./" />
-              <Navbutton name="About" link="./" />
-              <Navbutton name="Contact" link="./" />
+
+              <Navbutton name="Contact" link="./ContactUs" />
               <Navbutton name="Adopt" link="./" />
-              <Navbutton name="Resources" link="./" />
+              <Navbutton name="Resources" link="./Resource" />
             </span>
             <LoginandLanguage />
           </div>
