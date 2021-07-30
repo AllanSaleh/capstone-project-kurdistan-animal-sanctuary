@@ -64,7 +64,7 @@ const login = () => {
         className={
           logState === true
             ? "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-20 sm:mt-0 ml-24 sm:ml-24"
-            : "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 sm:mt-0 ml-24  sm:ml-14"
+            : "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 mb-4 md:mb-0 sm:mt-0 ml-24  sm:ml-14"
         }
       >
         <button
