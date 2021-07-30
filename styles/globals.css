@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.bgSize {
+  background-size: 20px !important;
+}

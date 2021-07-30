@@ -1,12 +1,62 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.bgSize {
+  background-size: contain;
+}
+.slider1 {
+  width: 50%;
+  margin: 2rem auto;
+  height: 200px;
+}
+.slide img {
+  width: 20rem;
+  margin: 0 auto;
+}
+.slide {
+  transform: scale(0.4);
+  transition: transform 600ms;
+  opacity: 0.5;
+}
+.activeSlide1 {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.arrow1 {
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow1 svg {
+  transition: color 300;
+}
+.arrow1 svg:hover {
+  color: #a3d2ca;
+}
+
+.next1 {
+  right: 0%;
+  top: 20%;
+}
+.prev1 {
+  left: 0%;
+  top: 20%;
+}
+.about {
+  left: 0%;
+  top: 10%;
+}
 
 .sliderImg,
 .slider,
 .imgContainer {
-  height: 520px;
+  height: 320px;
   width: 100%;
 }
 
