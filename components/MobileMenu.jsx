@@ -20,7 +20,7 @@ const MobileMenu = ({ state }) => (
           <Navbutton name="Adopt" link="./" />
         </li>
         <li className="pb-1">
-          <Navbutton name="Resources" link="./" />
+          <Navbutton name="Resources" link="./Resource" />
         </li>
       </ul>
       <LoginandLanguage />
