@@ -51,7 +51,7 @@ const login = () => {
             Login
           </button>
         </Link>
-        <Link href="./">
+        <Link href="./Signup">
           <button
             type="button"
             className=" w-28 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
