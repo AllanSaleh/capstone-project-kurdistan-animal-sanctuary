@@ -5,6 +5,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animalContainer {
+  height: 39rem;
+}
+
+.AdoptThePerfectPet {
+  height: 710px;
+}
+
+.animalCardConatiner {
+  width: 1250px;
+}
 .bgSize {
   background-size: contain;
 }

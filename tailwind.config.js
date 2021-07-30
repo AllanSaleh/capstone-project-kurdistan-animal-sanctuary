@@ -18,7 +18,7 @@ module.exports = {
       }),
       textColor: {
         primary: "#056676",
-        secondary: "#A3D2CA",
+        secondary: "#5EAAA8",
         highlight: "#FFD400",
       },
       borderColor: (theme) => ({
@@ -27,6 +27,12 @@ module.exports = {
         secondary: "#A3D2CA",
         highlight: "#FFD400",
       }),
+      backgroundImage: {
+        adopt_perfect_pet_header: "url('/images/bg.png')",
+      },
+      outline: {
+        primary: ["2px solid #056676", "-2px"],
+      },
     },
     fontFamily: {
       Quicksand: ["Quicksand"],
