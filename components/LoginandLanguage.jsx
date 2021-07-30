@@ -20,7 +20,7 @@ const login = () => {
             : "hidden"
         }
       >
-        <Link href="./">
+        <Link href="./UserProfile">
           <button
             type="button"
             onClick={() => {

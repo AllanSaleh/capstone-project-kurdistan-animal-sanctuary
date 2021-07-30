@@ -3,7 +3,7 @@ import React from "react";
 export default function whyAdopt() {
   return (
     // eslint-disable-next-line react/react-in-jsx-scope
-    <div className="bg-secondary py-6">
+    <div className="bg-secondary py-6 ">
       <h1 className="text-center text-primary text-4xl font-bold font-Quicksand ">
         Why Adopt?
       </h1>
