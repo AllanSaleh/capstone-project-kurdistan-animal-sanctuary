@@ -2,7 +2,7 @@
 import React from "react";
 
 const ContactUsBody = () => (
-  <div className="flex flex-col items-center w-full">
+  <div className="flex flex-col items-center w-full pb-10">
     <h1 className="text-center mt-10 text-7xl text-highlight">Contact us</h1>
     <p className="text-center mt-12 text-primary">
       A House Without Animals is like a Garden Without Flowers

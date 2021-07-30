@@ -32,7 +32,7 @@ const Navbar = () => {
             <span>
               <Navbutton name="Home" link="./" />
               <Navbutton name="About" link="./" />
-              <Navbutton name="Contact" link="./" />
+              <Navbutton name="Contact" link="./ContactUs" />
               <Navbutton name="Adopt" link="./" />
               <Navbutton name="Resources" link="./" />
             </span>
