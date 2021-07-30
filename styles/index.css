@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animalContainer {
+  height: 39rem;
+}
+
+.AdoptThePerfectPet {
+  height: 710px;
+}

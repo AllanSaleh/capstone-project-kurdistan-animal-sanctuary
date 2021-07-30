@@ -7,7 +7,7 @@ const AnimalCard = () => (
     <h1 className="text-secondary text-2xl sm:text-3xl mb-4 mt-7 ml-16">
       Animals need a loving home
     </h1>
-    <div className="flex flex-row w-full h-full flex-wrap justify-evenly mt-1">
+    <div className="flex flex-row w-full h-full flex-wrap justify-evenly mt-1 animalContainer overflow-y-scroll overflow-y-visible">
       {animalCardData.map((animal) => (
         <a href="#">
           <div className="border border-black flex flex-col w-56 rounded-md items-center h-48 mt-2 mx-8">
