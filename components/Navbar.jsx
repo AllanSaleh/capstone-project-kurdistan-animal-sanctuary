@@ -33,8 +33,9 @@ const Navbar = () => {
               <Navbutton name="Home" link="./" />
 
               <Navbutton name="Contact" link="./ContactUs" />
-              <Navbutton name="Adopt" link="./" />
+              <Navbutton name="Adopt" link="./Adopt" />
               <Navbutton name="Resources" link="./Resource" />
+            
             </span>
             <LoginandLanguage />
           </div>
