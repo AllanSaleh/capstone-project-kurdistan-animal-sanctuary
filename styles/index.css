@@ -11,7 +11,7 @@
 }
 
 .AdoptThePerfectPet {
-  height: 710px;
+  height: 723px;
 }
 
 .animalCardConatiner {
@@ -40,17 +40,22 @@
 }
 
 .arrow1 {
-  background-color: rgba(255, 255, 255, 0);
+  color: #a3d2ca;
+  transform: scale(4.5);
   position: absolute;
   cursor: pointer;
   z-index: 10;
 }
-.arrow1 svg {
+
+.arrow1:hover {
+  color: #056676;
+}
+/* .arrow1 svg {
   transition: color 300;
 }
 .arrow1 svg:hover {
   color: #a3d2ca;
-}
+} */
 
 .next1 {
   right: 0%;
