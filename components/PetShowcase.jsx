@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import firestore from "../services/firebase";
 
 const PetShowcase = () => {
+  const [users, setUsers] = useState([]);
+  const getdata = async () => {
+    const snapshot = await firestore.collection("animal photos").get();
+    const items = [];
+    snapshot.forEach((item) => items.push(item.data()));
+    setUsers(items);
+  };
+
+  useEffect(() => {
+    getdata();
+  }, []);
   const img = [
     {
       name: "Tomas",
@@ -27,12 +39,12 @@ const PetShowcase = () => {
           Make a Pet Happy
         </h1>
         <div className="flex flex-col justify-around items-center px-20 md:px-24 md:flex-row">
-          {img.map((item) => (
+          {users.map((item) => (
             <Link href="./AnimalProfile">
               <div className="card h-48 w-48 py-5  relative rounded-lg cursor-pointer md:h-80 md:w-80 md:mr-5 ">
                 <img
                   className="object-cover w-full h-full rounded-lg"
-                  src={item["image-path"]}
+                  src={item.photoUrl}
                   alt="animal profile "
                 />
 

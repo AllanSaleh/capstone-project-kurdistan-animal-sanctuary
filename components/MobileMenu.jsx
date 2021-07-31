@@ -15,7 +15,7 @@ const MobileMenu = ({ state }) => (
           <Navbutton name="Contact" link="./ContactUs" />
         </li>
         <li className="pb-1">
-          <Navbutton name="Adopt" link="./" />
+          <Navbutton name="Adopt" link="./AdoptThePerfectPet" />
         </li>
         <li className="pb-1">
           <Navbutton name="Resources" link="./Resource" />
