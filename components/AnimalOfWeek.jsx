@@ -1,6 +1,6 @@
 import React from "react";
-
 import Link from "next/link";
+import animalWeekData from "../mockData/AnimalOfTheWeekData";
 
 export default function AnimalOfWeek() {
   return (
@@ -23,16 +23,7 @@ export default function AnimalOfWeek() {
             </Link>
           </div>
           <p className=" mx-auto md:mx-0  font-Quicksand text-justify w-10/12">
-            lorem ipsum dolor sit amet lorem, consectetur adipiscing elits
-            lorem. lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem,
-            consectetur adipiscing elits lorem. lorem ipsum dolor sit amet lorem
-            ipsum dolor sit amet lorem, consectetur adipiscing elits lorem.
-            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem,
-            consectetur adipiscing elits lorem. lorem ipsum dolor sit amet lorem
-            ipsum dolor sit amet lorem, consectetur adipiscing elits lorem.
-            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem,
-            consectetur adipiscing elits lorem. lorem ipsum dolor sit amet lorem
-            ipsum dolor sit amet lorem, consectetur adipiscing elits lorem.
+            {animalWeekData[0].animal}
           </p>
         </div>
       </div>

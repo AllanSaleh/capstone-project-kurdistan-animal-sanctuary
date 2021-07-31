@@ -1,72 +1,12 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-props-no-spreading */
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import firestore from "../services/firebase";
-
-import shelter1 from "../public/assests-shelters/shelter 1.jpg";
-
-import shelter2 from "../public/assests-shelters/shelter 2.jpg";
-
-import shelter3 from "../public/assests-shelters/shelter 3.jpeg";
-
-import shelter4 from "../public/assests-shelters/shelter 4.jpg";
-
-import shelter5 from "../public/assests-shelters/shelter 5.jpg";
-
-import shelter6 from "../public/assests-shelters/shelter 6.jpg";
-
-import shelter7 from "../public/assests-shelters/shelter 7.jpg";
-
-import shelter8 from "../public/assests-shelters/shelter 8.jpg";
-
-const shelterImg = [
-  {
-    picture: shelter1,
-    about:
-      "1.lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem loremipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum",
-  },
-  {
-    picture: shelter2,
-    about:
-      "2.lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem loremipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum",
-  },
-  {
-    picture: shelter3,
-    about:
-      "3.lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem loremipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum",
-  },
-  {
-    picture: shelter4,
-    about:
-      "4.lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem loremipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum",
-  },
-  {
-    picture: shelter5,
-    about:
-      "5.lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem loremipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum",
-  },
-  {
-    picture: shelter6,
-    about:
-      "6.lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem loremipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum",
-  },
-  {
-    picture: shelter7,
-    about:
-      "7.lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem loremipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum",
-  },
-  {
-    picture: shelter8,
-    about:
-      "8.lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem loremipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum",
-  },
-];
 
 export default function ResourceCenter() {
   const [shelters, setShelters] = useState([]);
@@ -81,19 +21,24 @@ export default function ResourceCenter() {
     getdata();
   }, []);
   const NextArrow = ({ onClick }) => (
-    <div className="top-1/3 right-0 arrow1 bg-transparent" onClick={onClick}>
-      <FaArrowRight />
-    </div>
+    <button
+      type="button"
+      className="top-1/3 right-0 arrow1 bg-transparent"
+      onClick={onClick}
+    >
+      <FontAwesomeIcon icon={faAngleRight} />
+    </button>
   );
 
   const PrevArrow = ({ onClick }) => (
-    <div
+    <button
+      type="button"
       className="top-1/3 left-0 arrow1 bg-transparent "
       onClick={onClick}
       aria-hidden="true"
     >
-      <FaArrowLeft />
-    </div>
+      <FontAwesomeIcon icon={faAngleLeft} />
+    </button>
   );
 
   const [imageIndex, setImageIndex] = useState(0);
@@ -128,17 +73,9 @@ export default function ResourceCenter() {
         RESOURCES CENTER
       </h1>
       <p className="text-center p-4 md:p-6 text-secondary font-bold w-full">
-        lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit
-        amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem
-        ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem
-        ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet
-        lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum
-        dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum
-        dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem
-        lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem ipsum dolor
-        lorem ipsum dolor sit amet lorem lorem ipsum dolor lorem ipsum dolor sit
-        amet lorem lorem ipsum dolor lorem ipsum dolor sit amet lorem lorem
-        ipsum dolor lorem ipsum dolor sit amet lorem
+        Heres some shelters and general resources you can look through to find
+        the best way shelter for your need and vertanaries if you need any tips
+        to look out for your own pets
       </p>
       <h1 className="text-xl font-bold text-center font-Quicksand   text-primary pt-6 pb-10">
         Find Shelters We Work With

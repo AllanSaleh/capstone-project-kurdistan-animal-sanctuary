@@ -35,7 +35,7 @@ export default function footer() {
             <br />
           </p>
           <div>
-            <ul className="flex flex-row ">
+            <ul className="flex flex-row mt-4">
               <li>
                 <SocialIcon
                   url="twitter.com"
