@@ -97,9 +97,8 @@ export default function ResourceCenter() {
   );
 
   const [imageIndex, setImageIndex] = useState(0);
-
+  const about = [];
   const settings = {
-    infinite: true,
     autoplay: true,
     autoplaySpeed: 5000,
     lazyLoad: true,
@@ -150,10 +149,12 @@ export default function ResourceCenter() {
           <div
             className={
               idx === imageIndex
-                ? " activeSlide w-52 md:w-64 h-52 md:h-64 rounded-lg "
-                : " slide rounded-lg"
+                ? " activeSlide relative w-52 md:w-64 h-64 md:h-64 rounded-lg "
+                : " slide rounded-lg "
             }
           >
+            <div className="hidden"> {about.push(img.about)}</div>
+
             <img
               src={img.picture}
               alt={img}
@@ -163,7 +164,9 @@ export default function ResourceCenter() {
         ))}
       </Slider>
 
-      <div className="text-center font-bold	 text-secondary font-Quicksand mb-16 mt-1 " />
+      <div className="text-center font-bold	 text-secondary font-Quicksand  mb-16 mt-1  ">
+        {about[imageIndex]}
+      </div>
     </div>
   );
 }
