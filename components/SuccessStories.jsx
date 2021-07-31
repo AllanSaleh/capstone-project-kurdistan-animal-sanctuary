@@ -1,12 +1,23 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import SliderData from "../mockData/successStoriesData";
+import firestore from "../services/firebase";
 import PrevArrow, { NextArrow } from "./slidersArrow";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const SuccessStories = () => {
+  const [stories, setStories] = useState([]);
+  const getdata = async () => {
+    const snapshot = await firestore.collection("SuccessStories").get();
+    const items = [];
+    snapshot.forEach((item) => items.push(item.data()));
+    setStories(items);
+  };
+
+  useEffect(() => {
+    getdata();
+  }, []);
   const settings = {
     dots: false,
     infinite: true,
@@ -22,7 +33,7 @@ const SuccessStories = () => {
   return (
     <div>
       <Slider {...settings}>
-        {SliderData.map((slide) => (
+        {stories.map((slide) => (
           <div className="imgContainer relative">
             <img
               className="sliderImg relative filter brightness-50"

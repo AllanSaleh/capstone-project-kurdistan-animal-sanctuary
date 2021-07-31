@@ -17,6 +17,7 @@ const UserAnimals = ({ animalID }) => {
   return (
     <div className="py-12 pb-20">
       <h1 className="font-bold text-primary text-3xl pb-8">Pictures of me</h1>
+
       <Swiper
         breakpoints={{
           // when window width is >= 640px
