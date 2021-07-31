@@ -1,12 +1,13 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState } from "react";
 
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import firestore from "../services/firebase";
 
 import shelter1 from "../public/assests-shelters/shelter 1.jpg";
 
@@ -68,6 +69,17 @@ const shelterImg = [
 ];
 
 export default function ResourceCenter() {
+  const [shelters, setShelters] = useState([]);
+  const getdata = async () => {
+    const snapshot = await firestore.collection("ResourcesCenter").get();
+    const items = [];
+    snapshot.forEach((item) => items.push(item.data()));
+    setShelters(items);
+  };
+
+  useEffect(() => {
+    getdata();
+  }, []);
   const NextArrow = ({ onClick }) => (
     <div className="top-1/3 right-0 arrow1 bg-transparent" onClick={onClick}>
       <FaArrowRight />
@@ -85,9 +97,8 @@ export default function ResourceCenter() {
   );
 
   const [imageIndex, setImageIndex] = useState(0);
-
+  const about = [];
   const settings = {
-    infinite: true,
     autoplay: true,
     autoplaySpeed: 5000,
     lazyLoad: true,
@@ -134,16 +145,18 @@ export default function ResourceCenter() {
       </h1>
 
       <Slider className="slider w-4/5" {...settings}>
-        {shelterImg.map((img, idx) => (
+        {shelters.map((img, idx) => (
           <div
             className={
               idx === imageIndex
-                ? " activeSlide w-52 md:w-64 h-52 md:h-64 rounded-lg"
-                : " slide rounded-lg"
+                ? " activeSlide relative w-52 md:w-64 h-64 md:h-64 rounded-lg "
+                : " slide rounded-lg "
             }
           >
+            <div className="hidden"> {about.push(img.about)}</div>
+
             <img
-              src={img.picture.src}
+              src={img.picture}
               alt={img}
               className=" w-full h-full hover:bg-gray-300 object-cover"
             />
@@ -151,8 +164,8 @@ export default function ResourceCenter() {
         ))}
       </Slider>
 
-      <div className="text-center font-bold	 text-secondary font-Quicksand mb-16 mt-1 ">
-        {shelterImg[imageIndex].about}
+      <div className="text-center font-bold	 text-secondary font-Quicksand  mb-16 mt-1  ">
+        {about[imageIndex]}
       </div>
     </div>
   );
