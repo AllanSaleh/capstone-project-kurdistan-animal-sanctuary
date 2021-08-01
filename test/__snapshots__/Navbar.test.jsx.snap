@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`proparly renders the AnimalOfWeek component 1`] = `
+exports[`proparly renders the Navbar component 1`] = `
 <div>
   <nav
     className="flex flex-row-reverse  md:flex-row bg-primary  py-6 px-2 h-20 md:h-24 justify-items-center font-Quicksand"
