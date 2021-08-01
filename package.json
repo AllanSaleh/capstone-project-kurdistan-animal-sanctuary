@@ -9,9 +9,12 @@
     "prepare": "husky install",
     "check-lint": "eslint . --ext js --ext jsx",
     "format": "prettier --write .",
-    "test-all": "npm run format && npm run check-lint && npm run build"
+    "test-all": "npm run format && npm run check-lint && npm run build",
+    "test": "jest"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.14.9",
+    "@babel/preset-react": "^7.14.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
@@ -27,6 +30,7 @@
     "react-rating-stars-component": "^2.2.0",
     "react-slick": "^0.28.1",
     "react-social-icons": "^5.5.1",
+    "react-test-renderer": "^17.0.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^6.7.5",
     "tailwindcss": "^2.2.4"
