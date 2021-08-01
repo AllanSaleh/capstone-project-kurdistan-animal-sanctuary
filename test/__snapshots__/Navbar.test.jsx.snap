@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`proparly renders the AnimalOfWeek component 1`] = `
+<div>
+  <nav
+    className="flex flex-row-reverse  md:flex-row bg-primary  py-6 px-2 h-20 md:h-24 justify-items-center font-Quicksand"
+  >
+    <div
+      className="w-2/4  h-14 relative md:h-20"
+    >
+      <img
+        alt="Website logo "
+        className="w-12 h-12 absolute -top-2 -left-5 md:left-0 cursor-pointer md:w-16 md:h-16"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        src="./Logo.png"
+      />
+    </div>
+    <div
+      className="flex flex-row  items-center w-2/4 md:justify-around md:items-center"
+    >
+      <div
+        className="  float-right whitespace-nowrap hidden md:inline-block"
+      >
+        <span>
+          <button
+            className="mr-3 text-gray-300 hover:text-highlight"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            Home
+          </button>
+          <button
+            className="mr-3 text-gray-300 hover:text-highlight"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            Contact
+          </button>
+          <button
+            className="mr-3 text-gray-300 hover:text-highlight"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            Adopt
+          </button>
+          <button
+            className="mr-3 text-gray-300 hover:text-highlight"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            Resources
+          </button>
+        </span>
+        <span>
+          <span
+            className="hidden"
+          >
+            <button
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              type="button"
+            >
+              <img
+                alt="Website logo "
+                className="w-16 h-16  cursor-pointer  rounded-full   "
+                src="./profile.png"
+              />
+            </button>
+          </span>
+          <span
+            className="block mt-7 sm:inline-block sm:mt-0 "
+          >
+            <button
+              className="mr-3.5 w-28 h-10 text-highlight border-2 border-highlight rounded-lg "
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              type="button"
+            >
+              Login
+            </button>
+            <button
+              className=" w-28 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              type="button"
+            >
+              Sign up
+            </button>
+          </span>
+          <span
+            className="bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 mb-4 md:mb-0 sm:mt-0 ml-24  sm:ml-14"
+          >
+            <button
+              className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-black focus:text-primary foucs:bg-primary rounded-l-full px-4 py-2 active"
+              type="button"
+            >
+              <span>
+                en
+              </span>
+            </button>
+            <button
+              className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-black focus:text-primary foucs:bg-primary rounded-l-full px-4 py-2"
+              type="button"
+            >
+              <span>
+                ku
+              </span>
+            </button>
+          </span>
+        </span>
+      </div>
+      <div
+        className="inline-block  float-right whitespace-nowrap md:hidden items-center justify-center"
+      >
+        <button
+          className=" w-full h-full font-bold rounded-lg    text-secondary flex "
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="h-12 w-12"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="hidden"
+  >
+    <div
+      className="flex felx-row bg-primary"
+    >
+      <ul
+        className=" px-5 flex flex-col"
+      >
+        <li
+          className="pb-1"
+        >
+          <button
+            className="mr-3 text-gray-300 hover:text-highlight"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            Home
+          </button>
+        </li>
+        <li
+          className="pb-1"
+        >
+          <button
+            className="mr-3 text-gray-300 hover:text-highlight"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            Contact
+          </button>
+        </li>
+        <li
+          className="pb-1"
+        >
+          <button
+            className="mr-3 text-gray-300 hover:text-highlight"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            Adopt
+          </button>
+        </li>
+        <li
+          className="pb-1"
+        >
+          <button
+            className="mr-3 text-gray-300 hover:text-highlight"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            Resources
+          </button>
+        </li>
+      </ul>
+      <span>
+        <span
+          className="hidden"
+        >
+          <button
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            <img
+              alt="Website logo "
+              className="w-16 h-16  cursor-pointer  rounded-full   "
+              src="./profile.png"
+            />
+          </button>
+        </span>
+        <span
+          className="block mt-7 sm:inline-block sm:mt-0 "
+        >
+          <button
+            className="mr-3.5 w-28 h-10 text-highlight border-2 border-highlight rounded-lg "
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            Login
+          </button>
+          <button
+            className=" w-28 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            type="button"
+          >
+            Sign up
+          </button>
+        </span>
+        <span
+          className="bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 mb-4 md:mb-0 sm:mt-0 ml-24  sm:ml-14"
+        >
+          <button
+            className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-black focus:text-primary foucs:bg-primary rounded-l-full px-4 py-2 active"
+            type="button"
+          >
+            <span>
+              en
+            </span>
+          </button>
+          <button
+            className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-black focus:text-primary foucs:bg-primary rounded-l-full px-4 py-2"
+            type="button"
+          >
+            <span>
+              ku
+            </span>
+          </button>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
