@@ -1,11 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
-import "./swiper.module.css";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper/core";
-import "swiper/swiper.min.css";
-import "swiper/components/pagination/pagination.min.css";
 
 SwiperCore.use([Navigation]);
 
