@@ -71,6 +71,7 @@ const AdoptThePerfectPet = () => {
             className="border-primary border focus:outline-none focus:ring focus:border-primary"
             onChange={searching}
           >
+            <option value="">-</option>
             <option value="small">{t("adoptTheperfectPet.small")}</option>
             <option value="medium">{t("adoptTheperfectPet.medium")}</option>
             <option value="big">{t("adoptTheperfectPet.big")}</option>
@@ -84,6 +85,7 @@ const AdoptThePerfectPet = () => {
             className="border-primary border focus:outline-none focus:ring focus:border-primary"
             onChange={searching}
           >
+            <option value="">-</option>
             <option value="female">{t("adoptTheperfectPet.female")}</option>
             <option value="male">{t("adoptTheperfectPet.male")}</option>
           </select>
@@ -106,6 +108,7 @@ const AdoptThePerfectPet = () => {
             className="border-primary border focus:outline-none focus:ring focus:border-primary"
             onChange={searching}
           >
+            <option value="">-</option>
             <option value="yes">{t("adoptTheperfectPet.yes")}</option>
             <option value="no">{t("adoptTheperfectPet.no")}</option>
           </select>
