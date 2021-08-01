@@ -1,0 +1,10 @@
+{
+  "signIn": {
+    "signIn": "خۆ تۆمارکردن",
+    "rememberMe": "هێشتنەوەی زانیاریەکان",
+    "password": "وشەی نهێنی",
+    "email": "ئیمێل",
+    "forgetPassword": "وشەی نهێنیت لەبیرکردوە؟",
+    "dontHaveAccount": "هەژمارت نیە؟"
+  }
+}

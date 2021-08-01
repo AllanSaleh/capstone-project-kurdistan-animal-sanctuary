@@ -1,20 +1,26 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 import PropTypes from "prop-types";
 
-const AnimalInformation = ({ about, whatILike }) => (
-  <div>
+const AnimalInformation = ({ about, whatILike }) => {
+  const { t } = useTranslation("animalProfile");
+  return (
     <div>
-      <h1 className="font-bold text-primary text-3xl pb-8">About me</h1>
-      <p className="text-sm md:text-lg text-primary">{about}</p>
+      <div>
+        <h1 className="font-bold text-primary text-3xl pb-8">
+          {t("animalProfile.aboutMe")}
+        </h1>
+        <p className="text-sm md:text-lg text-primary">{about}</p>
+      </div>
+      <div className="py-16">
+        <h1 className="font-bold text-primary text-3xl pb-8">
+          {t("animalProfile.whatIlike")}
+        </h1>
+        <p className="text-sm md:text-lg text-primary ">{whatILike}</p>
+      </div>
     </div>
-    <div className="py-16">
-      <h1 className="font-bold text-primary text-3xl pb-8">
-        What I Like to do
-      </h1>
-      <p className="text-sm md:text-lg text-primary ">{whatILike}</p>
-    </div>
-  </div>
-);
+  );
+};
 AnimalInformation.propTypes = {
   about: PropTypes.string.isRequired,
   whatILike: PropTypes.string.isRequired,

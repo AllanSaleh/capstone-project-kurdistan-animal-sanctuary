@@ -1,0 +1,13 @@
+{
+  "animalProfile": {
+    "Sex": "Sex",
+    "Age": "Age",
+    "Vaccinated": "Vaccinated",
+    "Shelter": "Shelter",
+    "yearsOld": "years old",
+    "aboutMe": "About me",
+    "whatIlike": "What I like to do",
+    "picturesOfMe": "Pictures of me",
+    "applyForAdopt": "Apply For Adoption"
+  }
+}

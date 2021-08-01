@@ -1,4 +1,5 @@
 import React from "react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Whyadopt from "../components/WhyAdopt";
@@ -12,7 +13,6 @@ export default function Home() {
   return (
     <>
       <Navbar />
-
       <Hero />
       <Whyadopt />
       <AnimalOfWeek />
@@ -21,4 +21,18 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "navbar",
+        "footer",
+        "homePage",
+      ])),
+      // Will be passed to the page component as props
+    },
+  };
 }

@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 import { SocialIcon } from "react-social-icons";
 
 export default function footer() {
+  const { t } = useTranslation("footer");
   return (
     // eslint-disable-next-line react/react-in-jsx-scope
     <footer className="w-full h-96 pt-10 bg-secondary text-2xl bg-paw  bg-no-repeat  bg-cover font-Quicksand">
@@ -13,20 +15,17 @@ export default function footer() {
             className="justify-self-end m-auto w-20 h-20 md:w-36 md:h-36  "
           />
         </div>
-        <div className=" mb-5 md:mb-0 md:pt-5 md:pl-24 inline-block text-lg md:text-2xl">
-          <h1 className=" text-primary font-bold font-Quicksand">About Us</h1>
+        <div className=" mb-5 md:mb-0 md:pt-5 md:pl-24 inline-block text-lg md:text-2xl w-96">
+          <h1 className=" text-primary font-bold font-Quicksand">
+            {t("footer.aboutus")}
+          </h1>
           <p className="  text-primary font-Quicksand ">
-            Kurdistan Animal Sanctacy (KAS) <br />
-            is NGO that saves <br />
-            animals and looks for a loving
-            <br />
-            parent to adopt them
-            <br />
+            {t("footer.aboutUsDescrption")}
           </p>
         </div>
         <div className=" md:pt-5 md:pl-36 inline-block text-lg md:text-2xl">
           <h1 className=" text-primary font-bold font-Quicksand">
-            Get in touch
+            {t("footer.getInTouch")}
           </h1>
           <p className=" text-primary font-Quicksand ">
             info@kas.com <br />

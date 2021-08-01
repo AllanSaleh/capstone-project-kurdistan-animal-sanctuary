@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 const login = () => {
   const [logState, setLogState] = useState(false);
+  const router = useRouter();
+  const { t } = useTranslation("navbar");
 
   const Logging = () => {
     if (logState === true) {
@@ -48,7 +52,7 @@ const login = () => {
               Logging();
             }}
           >
-            Login
+            {t("navbar.Login")}
           </button>
         </Link>
         <Link href="./Signup">
@@ -56,7 +60,7 @@ const login = () => {
             type="button"
             className=" w-28 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
           >
-            Sign up
+            {t("navbar.Signin")}
           </button>
         </Link>
       </span>
@@ -67,18 +71,14 @@ const login = () => {
             : "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 mb-4 md:mb-0 sm:mt-0 ml-24  sm:ml-14"
         }
       >
-        <button
-          type="button"
-          className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-black focus:text-primary foucs:bg-primary rounded-l-full px-4 py-2 active"
-        >
-          <span>en</span>
-        </button>
-        <button
-          type="button"
-          className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-black focus:text-primary foucs:bg-primary rounded-l-full px-4 py-2"
-        >
-          <span>ku</span>
-        </button>
+        <Link href="/" locale={router.locale === "en" ? "kd" : "en"}>
+          <button
+            className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-black focus:text-primary foucs:bg-primary rounded-l-full px-4 py-2 active"
+            type="button"
+          >
+            {t("navbar.Language")}
+          </button>
+        </Link>
       </span>
     </span>
   );
