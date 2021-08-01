@@ -17,7 +17,11 @@ const AnimalCard = (props) => {
             (animal) =>
               animal.size.indexOf(props.size) >= 0 &&
               animal.gender.indexOf(props.gender) >= 0 &&
-              animal.petType.toLowerCase().indexOf(props.petType) >= 0
+              animal.petType.toLowerCase().indexOf(props.petType) >= 0 &&
+              animal.breed.toLowerCase().indexOf(props.breed) >= 0 &&
+              animal.age.indexOf(props.age) >= 0 &&
+              animal.petColor.toLowerCase().indexOf(props.color) >= 0 &&
+              animal.Petvaccinated.indexOf(props.vaccinated) >= 0
           )
           .map((animal) => (
             <a href="#">

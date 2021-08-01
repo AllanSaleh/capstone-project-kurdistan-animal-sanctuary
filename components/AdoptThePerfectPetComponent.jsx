@@ -87,12 +87,12 @@ const AdoptThePerfectPet = () => {
             <option value="female">{t("adoptTheperfectPet.female")}</option>
             <option value="male">{t("adoptTheperfectPet.male")}</option>
           </select>
-          <label htmlFor="color" className="mt-1">
+          <label htmlFor="Color" className="mt-1">
             {t("adoptTheperfectPet.color")}
           </label>
           <input
             type="text"
-            id="color"
+            id="Color"
             name="color"
             className="border-primary border focus:outline-none focus:ring focus:border-primary"
             onChange={searching}
@@ -118,6 +118,10 @@ const AdoptThePerfectPet = () => {
           petType={allValues.petType}
           size={allValues.size}
           gender={allValues.gender}
+          breed={allValues.breed}
+          age={allValues.age}
+          color={allValues.color}
+          vaccinated={allValues.vaccinated}
         />
       </div>
     </div>
