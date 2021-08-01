@@ -1,5 +1,4 @@
 import React from "react";
-import "babel-polyfill";
 
 export default function whyAdopt() {
   return (
