@@ -10,7 +10,7 @@
     "check-lint": "eslint . --ext js --ext jsx",
     "format": "prettier --write .",
     "test-all": "npm run format && npm run check-lint && npm run build",
-    "test": "jest"
+    "test": "jest "
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.14.5",
@@ -20,6 +20,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@jest/globals": "^27.0.6",
+    "babel-polyfill": "^6.26.0",
     "firebase": "^8.8.1",
     "i18next": "^20.3.2",
     "next": "11.0.1",
@@ -36,8 +37,7 @@
     "regenerator-runtime": "^0.13.9",
     "slick-carousel": "^1.8.1",
     "swiper": "^6.7.5",
-    "tailwindcss": "^2.2.4",
-    "babel-polyfill": "^6.26.0"
+    "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.14.5",
