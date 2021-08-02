@@ -1,0 +1,10 @@
+{
+  "signIn": {
+    "signIn": "Sign In",
+    "rememberMe": "Remember me",
+    "password": "Password",
+    "email": "Email",
+    "forgetPassword": "Forget Password?",
+    "dontHaveAccount": "you dont have an account yet?"
+  }
+}
