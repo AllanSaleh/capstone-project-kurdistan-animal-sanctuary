@@ -23,18 +23,18 @@ exports[`proparly renders the Hero component 1`] = `
     <p
       className="font-black uppercase text-primary text-5xl mb-8 "
     >
-      Make a pet happy
+      homePage.whyAdopt
     </p>
     <p
       className="font-black uppercase text-primary mb-8 "
     >
-      Adopt Now!
+      homePage.adoptNow
     </p>
     <button
       className=" py-2  px-20 font-semibold text-primary bg-highlight hover:bg-darken"
       type="button"
     >
-      Go to Adoption page
+      homePage.adoptionPage
        
     </button>
   </div>

@@ -14,19 +14,19 @@ exports[`proparly renders the SingUp component 1`] = `
       <p
         className="text-primary text-4xl sm:text-5xl text-center font-Quicksand p-10 font-bold"
       >
-        Join Us
+        signUp.joinUs
       </p>
       <div
         className="flex flex-col "
       >
         <input
-          className="border mb-6 border-primary rounded text-primary text-sm h-10 bg-secondary"
+          className="border mb-6 border-primary rounded text-primary text-sm h-10 bg-secondary pl-1"
           faIcon="envelope"
-          placeholder="   Email   "
+          placeholder="signUp.email"
         />
         <input
-          className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary"
-          placeholder="   Password   "
+          className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary pl-1"
+          placeholder="signUp.password"
           type="password"
         />
       </div>
@@ -34,29 +34,29 @@ exports[`proparly renders the SingUp component 1`] = `
         className="flex flex-row ml-9 sm:ml-0"
       >
         <input
-          className="border border-primary rounded text-primary text-sm w-28 sm:w-30 h-10 bg-secondary"
-          placeholder="   First Name   "
+          className="border border-primary rounded text-primary text-sm w-28 sm:w-30 h-10 bg-secondary pl-1"
+          placeholder="signUp.firstName"
         />
         <span
           className="mr-6"
         />
         <input
-          className="border mb-6 border-primary rounded text-primary text-sm w-28 w-30 h-10 bg-secondary"
-          placeholder="   Last Name   "
+          className="border mb-6 border-primary rounded text-primary text-sm w-28 w-30 h-10 bg-secondary pl-1"
+          placeholder="signUp.LastName"
         />
       </div>
       <button
         className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"
         type="submit"
       >
-        Sign up
+        signUp.signUp
       </button>
     </div>
     <div
       className="text-center text-primary font-Quicksand text-sm font-bold"
     >
       <h1>
-        Or continue With
+        signUp.Continue
       </h1>
        
       <br />

@@ -109,7 +109,7 @@ exports[`proparly renders the Profile&Rating component 1`] = `
         className="mr-3 w-28 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
         type="button"
       >
-        Message
+        userProfile.message
       </button>
     </div>
   </div>

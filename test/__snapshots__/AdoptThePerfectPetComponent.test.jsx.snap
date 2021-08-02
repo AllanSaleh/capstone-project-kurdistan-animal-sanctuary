@@ -10,7 +10,7 @@ exports[`proparly renders the AdoptThePerfectPetComponent component 1`] = `
     <p
       className="inline-block w-4/5 text-center w-full text-4xl sm:text-5xl text-white"
     >
-      Adopt the perfect pet
+      adoptTheperfectPet.adopt
     </p>
   </div>
   <div
@@ -22,12 +22,12 @@ exports[`proparly renders the AdoptThePerfectPetComponent component 1`] = `
       <h1
         className="mb-5 text-2xl sm:text-3xl text-secondary mt-16"
       >
-        Search Filters
+        adoptTheperfectPet.searchFilters
       </h1>
       <label
         htmlFor="PetType"
       >
-        PET TYPE
+        adoptTheperfectPet.petType
       </label>
       <input
         className="border-primary border focus:outline-none focus:ring focus:border-primary"
@@ -40,7 +40,7 @@ exports[`proparly renders the AdoptThePerfectPetComponent component 1`] = `
         className="mt-1"
         htmlFor="Breed"
       >
-        BREED
+        adoptTheperfectPet.breed
       </label>
       <input
         className="border-primary border focus:outline-none focus:ring focus:border-primary"
@@ -53,7 +53,7 @@ exports[`proparly renders the AdoptThePerfectPetComponent component 1`] = `
         className="mt-1"
         htmlFor="age"
       >
-        AGE
+        adoptTheperfectPet.age
       </label>
       <input
         className="border-primary border focus:outline-none focus:ring focus:border-primary"
@@ -69,7 +69,7 @@ exports[`proparly renders the AdoptThePerfectPetComponent component 1`] = `
         className="mt-1"
         htmlFor="size"
       >
-        SIZE
+        adoptTheperfectPet.size
       </label>
       <select
         className="border-primary border focus:outline-none focus:ring focus:border-primary"
@@ -79,26 +79,31 @@ exports[`proparly renders the AdoptThePerfectPetComponent component 1`] = `
         type="text"
       >
         <option
+          value=""
+        >
+          -
+        </option>
+        <option
           value="small"
         >
-          small
+          adoptTheperfectPet.small
         </option>
         <option
           value="medium"
         >
-          medium
+          adoptTheperfectPet.medium
         </option>
         <option
           value="big"
         >
-          big
+          adoptTheperfectPet.big
         </option>
       </select>
       <label
         className="mt-1"
         htmlFor="gender"
       >
-        GENDER
+        adoptTheperfectPet.gender
       </label>
       <select
         className="border-primary border focus:outline-none focus:ring focus:border-primary"
@@ -107,25 +112,30 @@ exports[`proparly renders the AdoptThePerfectPetComponent component 1`] = `
         onChange={[Function]}
       >
         <option
-          value="female"
+          value=""
         >
-          female
+          -
         </option>
         <option
-          value="male"
+          value="mé"
         >
-          male
+          adoptTheperfectPet.female
+        </option>
+        <option
+          value="nér"
+        >
+          adoptTheperfectPet.male
         </option>
       </select>
       <label
         className="mt-1"
-        htmlFor="color"
+        htmlFor="Color"
       >
-        COLOR
+        adoptTheperfectPet.color
       </label>
       <input
         className="border-primary border focus:outline-none focus:ring focus:border-primary"
-        id="color"
+        id="Color"
         name="color"
         onChange={[Function]}
         type="text"
@@ -134,7 +144,7 @@ exports[`proparly renders the AdoptThePerfectPetComponent component 1`] = `
         className="mt-1"
         htmlFor="vaccinated"
       >
-        vaccinated
+        adoptTheperfectPet.vaccinated
       </label>
       <select
         className="border-primary border focus:outline-none focus:ring focus:border-primary"
@@ -143,14 +153,19 @@ exports[`proparly renders the AdoptThePerfectPetComponent component 1`] = `
         onChange={[Function]}
       >
         <option
+          value=""
+        >
+          -
+        </option>
+        <option
           value="yes"
         >
-          yes
+          adoptTheperfectPet.yes
         </option>
         <option
           value="no"
         >
-          no
+          adoptTheperfectPet.no
         </option>
       </select>
       <div
@@ -169,7 +184,7 @@ exports[`proparly renders the AdoptThePerfectPetComponent component 1`] = `
       <h1
         className="text-secondary text-2xl sm:text-3xl mb-4 mt-7 ml-16"
       >
-        Animals need a loving home
+        adoptTheperfectPet.animalsNeedsAlovingHome
       </h1>
       <div
         className="flex flex-row w-full h-full flex-wrap justify-evenly mt-1 animalContainer overflow-y-scroll overflow-y-visible"

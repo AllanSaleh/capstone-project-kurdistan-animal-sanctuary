@@ -6,7 +6,7 @@ exports[`proparly renders the AnimalInformation component 1`] = `
     <h1
       className="font-bold text-primary text-3xl pb-8"
     >
-      About me
+      animalProfile.aboutMe
     </h1>
     <p
       className="text-sm md:text-lg text-primary"
@@ -18,7 +18,7 @@ exports[`proparly renders the AnimalInformation component 1`] = `
     <h1
       className="font-bold text-primary text-3xl pb-8"
     >
-      What I Like to do
+      animalProfile.whatIlike
     </h1>
     <p
       className="text-sm md:text-lg text-primary "

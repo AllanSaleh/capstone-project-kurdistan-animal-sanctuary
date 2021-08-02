@@ -7,7 +7,7 @@ exports[`proparly renders the UserDescription component 1`] = `
   <h1
     className=" font-bold text-primary text-3xl pb-8"
   >
-    About me
+    userProfile.aboutMe
   </h1>
   <p
     className="text-sm md:text-lg text-primary"

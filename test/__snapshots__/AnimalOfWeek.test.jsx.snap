@@ -15,7 +15,7 @@ exports[`proparly renders the AnimalOfWeek component 1`] = `
     <h1
       className="pb-8 text-center text-primary text-3xl font-Quicksand font-bold"
     >
-      Animal of the week
+      homePage.AnimalOfWeek
     </h1>
     <div
       className="block md:flex"

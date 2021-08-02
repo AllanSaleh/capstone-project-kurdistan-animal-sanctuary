@@ -14,18 +14,18 @@ exports[`proparly renders the Signin component 1`] = `
       <p
         className="text-primary text-5xl text-center font-Quicksand p-10"
       >
-        Sign In
+        signIn.signIn
       </p>
       <div
         className="flex flex-col "
       >
         <input
-          className="border-2 mb-2 border-primary rounded text-primary"
-          placeholder="Email"
+          className="border-2 mb-2 border-primary rounded text-primary pl-1"
+          placeholder="signIn.email"
         />
         <input
-          className="border-2 mb-2 border-primary rounded text-primary"
-          placeholder="Password"
+          className="border-2 mb-2 border-primary rounded text-primary pl-1"
+          placeholder="signIn.password"
           type="password"
         />
       </div>
@@ -38,13 +38,13 @@ exports[`proparly renders the Signin component 1`] = `
           name="membrme"
           type="checkbox"
         />
-        Remember me
+        signIn.rememberMe
       </label>
       <button
         className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"
         type="submit"
       >
-        Sign In
+        signIn.signIn
       </button>
     </div>
     <div
@@ -93,14 +93,14 @@ exports[`proparly renders the Signin component 1`] = `
         <a
           href="forgetpassword"
         >
-          Forget password?
+          signIn.forgetPassword
         </a>
          
         <br />
         <a
           href="signup"
         >
-          you dont have an account yet?
+          signIn.dontHaveAccount
         </a>
       </div>
     </div>

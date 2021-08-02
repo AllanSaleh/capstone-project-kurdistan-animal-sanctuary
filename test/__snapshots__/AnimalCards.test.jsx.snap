@@ -7,7 +7,7 @@ exports[`proparly renders the AnimalCards component 1`] = `
   <h1
     className="text-secondary text-2xl sm:text-3xl mb-4 mt-7 ml-16"
   >
-    Animals need a loving home
+    adoptTheperfectPet.animalsNeedsAlovingHome
   </h1>
   <div
     className="flex flex-row w-full h-full flex-wrap justify-evenly mt-1 animalContainer overflow-y-scroll overflow-y-visible"

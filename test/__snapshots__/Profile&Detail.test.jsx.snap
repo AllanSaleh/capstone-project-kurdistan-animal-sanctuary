@@ -32,22 +32,22 @@ exports[`proparly renders the Profile&Detail component 1`] = `
               <li
                 className="pb-5 "
               >
-                Sex
+                animalProfile.Sex
               </li>
               <li
                 className="pb-5 "
               >
-                Age
+                animalProfile.Age
               </li>
               <li
                 className="pb-5 "
               >
-                Vaccinated
+                animalProfile.Vaccinated
               </li>
               <li
                 className="pb-5 "
               >
-                Shelter
+                animalProfile.Shelter
               </li>
             </ul>
           </div>
@@ -63,7 +63,9 @@ exports[`proparly renders the Profile&Detail component 1`] = `
               <li
                 className="pb-5 "
               >
-                 Years old 
+                 
+                animalProfile.yearsOld
+                 
               </li>
               <li
                 className="pb-5 "
@@ -87,7 +89,7 @@ exports[`proparly renders the Profile&Detail component 1`] = `
         className="mr-3 w-48 h-12 text-primary bg-highlight hover:bg-darken rounded-lg font-medium"
         type="button"
       >
-        Apply For Adoption
+        animalProfile.applyForAdopt
       </button>
     </div>
   </div>
