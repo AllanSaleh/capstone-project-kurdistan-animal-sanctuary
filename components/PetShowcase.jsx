@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import firestore from "../services/firebase";
 
 const PetShowcase = () => {
+  const { t } = useTranslation("homePage");
   const [users, setUsers] = useState([]);
   const getdata = async () => {
     const snapshot = await firestore.collection("animal photos").get();
@@ -36,7 +38,7 @@ const PetShowcase = () => {
     <section className=" w-full h-5/6 pb-16 bg-secondary font-Quicksand">
       <div className="">
         <h1 className="text-center mx-auto w-full pt-6 pb-10 text-3xl w-72 font-bold text-primary md:text-7xl ">
-          Make a Pet Happy
+          {t("homePage.makeApetHappy")}
         </h1>
         <div className="flex flex-col justify-around items-center px-20 md:px-24 md:flex-row">
           {users.map((item) => (

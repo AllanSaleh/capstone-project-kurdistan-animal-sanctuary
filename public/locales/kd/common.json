@@ -1,0 +1,10 @@
+{
+  "h1": "A simple example",
+  "language": "Kd",
+  "navbar": {
+    "Home": "Home",
+    "Contact": "Contact",
+    "Adopt": "Adopt",
+    "Resources": "Resources"
+  }
+}

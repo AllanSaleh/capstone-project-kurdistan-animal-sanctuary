@@ -1,0 +1,11 @@
+{
+  "navbar": {
+    "Home": "Home",
+    "Contact": "Contact",
+    "Adopt": "Adopt",
+    "Resources": "Resources",
+    "Login": "Login",
+    "Signin": "Sign up",
+    "Language": "EN"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "adoptTheperfectPet": {
+    "petType": "جۆری هاورێ",
+    "breed": "نەژاد",
+    "age": "تەمەن",
+    "size": "قەبارە",
+    "small": "بچووک",
+    "medium": "ناوەند",
+    "big": "گەورە",
+    "gender": "رەگەز",
+    "male": "نێر",
+    "female": "مێ",
+    "color": "رەنگ",
+    "vaccinated": "کوتان",
+    "yes": "بەڵێ",
+    "no": "نەخێر",
+    "animalsNeedsAlovingHome": "ئاژەڵانیش پێوستیان به خۆشەویستی هەیە",
+    "searchFilters": "گەران",
+    "adopt": "باشترین هاورێت بدۆزەوە"
+  }
+}
