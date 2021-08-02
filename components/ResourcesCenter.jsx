@@ -2,13 +2,14 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-props-no-spreading */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { useTranslation } from "next-i18next";
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import firestore from "../services/firebase";
 
 export default function ResourceCenter() {
+  const { t } = useTranslation("resources");
   const [shelters, setShelters] = useState([]);
   const getdata = async () => {
     const snapshot = await firestore.collection("ResourcesCenter").get();
@@ -70,15 +71,13 @@ export default function ResourceCenter() {
   return (
     <div className="block px-4 md:px-20">
       <h1 className="font-extrabold text-center pt-16 pb-5 text-Quicksand text-3xl text-primary">
-        RESOURCES CENTER
+        {t("resources.resources")}
       </h1>
       <p className="text-center p-4 md:p-6 text-secondary font-bold w-full">
-        Heres some shelters and general resources you can look through to find
-        the best way shelter for your need and vertanaries if you need any tips
-        to look out for your own pets
+        {t("resources.resourcesDescrption")}
       </p>
       <h1 className="text-xl font-bold text-center font-Quicksand   text-primary pt-6 pb-10">
-        Find Shelters We Work With
+        {t("resources.shelters")}
       </h1>
 
       <Slider className="slider w-4/5" {...settings}>
