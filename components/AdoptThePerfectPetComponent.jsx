@@ -86,8 +86,8 @@ const AdoptThePerfectPet = () => {
             onChange={searching}
           >
             <option value="">-</option>
-            <option value="female">{t("adoptTheperfectPet.female")}</option>
-            <option value="male">{t("adoptTheperfectPet.male")}</option>
+            <option value="mé">{t("adoptTheperfectPet.female")}</option>
+            <option value="nér">{t("adoptTheperfectPet.male")}</option>
           </select>
           <label htmlFor="Color" className="mt-1">
             {t("adoptTheperfectPet.color")}

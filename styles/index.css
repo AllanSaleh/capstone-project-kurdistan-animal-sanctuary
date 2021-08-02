@@ -100,4 +100,11 @@
   top: 50%;
   left: 5%;
 }
+
+.uploadImg {
+  border: 1px solid #056676;
+  display: inline-block;
+  padding: 15px 12px;
+  cursor: pointer;
+}
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
