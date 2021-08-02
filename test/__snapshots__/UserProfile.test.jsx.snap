@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`proparly renders the UserProfile component 1`] = `
+<div>
+  <div
+    className=" w-full px-7 md:px-36 font-Quicksand"
+  >
+    <div
+      className="flex flex-wrap md:flex-nowrap  py-14  font-Quicksand w-full"
+    >
+      <div
+        className="flex flex-row "
+      >
+        <div
+          className="w-40 md:w-72 h-40 md:h-72 rounded-full "
+        >
+          <img
+            alt="animal profile "
+            className=" w-36 md:w-60 h-36 md:h-60 border-2 border-secondary p-2 rounded-full"
+            src="./testImages/profile.jpeg"
+          />
+        </div>
+        <div
+          className="w-48"
+        >
+          <div
+            className="px-5 py-4 font-bold text-primary text-xl md:text-2xl "
+          >
+            <div>
+              Daban Sadiq
+            </div>
+          </div>
+          <div
+            className="hidden md:inline-block w-52 md:w-72 h-8 p-5 pt-6"
+          >
+            <div
+              className="react-stars-wrapper-"
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+            >
+              <div
+                aria-label="add rating by typing an integer from 0 to 5 or pressing arrow keys"
+                className=""
+                onKeyDown={[Function]}
+                style={
+                  Object {
+                    "overflow": "hidden",
+                    "position": "relative",
+                  }
+                }
+                tabIndex={0}
+              >
+                <p
+                  role="status"
+                  style={
+                    Object {
+                      "left": "-200rem",
+                      "position": "absolute",
+                    }
+                  }
+                >
+                  0
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className=" inline-block md:hidden w-48 md:w-72 h-8 p-5 pt-6"
+          >
+            <div
+              className="react-stars-wrapper-"
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+            >
+              <div
+                aria-label="add rating by typing an integer from 0 to 5 or pressing arrow keys"
+                className=""
+                onKeyDown={[Function]}
+                style={
+                  Object {
+                    "overflow": "hidden",
+                    "position": "relative",
+                  }
+                }
+                tabIndex={0}
+              >
+                <p
+                  role="status"
+                  style={
+                    Object {
+                      "left": "-200rem",
+                      "position": "absolute",
+                    }
+                  }
+                >
+                  0
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="grid grid-flow-col w-4/5  "
+      >
+        <div
+          className="justify-self-start pt-8 md:pt-0 items-start md:justify-self-end md:pt-12"
+        >
+          <button
+            className="mr-3 w-28 h-10 text-primary bg-highlight hover:bg-darken rounded-lg "
+            type="button"
+          >
+            userProfile.message
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="  "
+    >
+      <h1
+        className=" font-bold text-primary text-3xl pb-8"
+      >
+        userProfile.aboutMe
+      </h1>
+      <p
+        className="text-sm md:text-lg text-primary"
+      >
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
+      </p>
+    </div>
+    <div
+      className="py-12 pb-20"
+    >
+      <form />
+      <h1
+        className="font-bold text-primary text-3xl pb-8"
+      >
+        userProfile.myAnimals
+      </h1>
+      <div
+        className="swiper-container"
+      >
+        <div
+          className="swiper-pagination"
+        />
+        <div
+          className="swiper-wrapper"
+        >
+          <div
+            className="swiper-slide"
+          >
+            <div
+              className="  rounded-lg cursor-pointer h-40 w-40 md:w-60 md:h-60 border-2  border-secondary "
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              <img
+                alt="animal profile "
+                className=" rounded-md w-full h-full hover:bg-gray-300 object-cover "
+                src="./testImages/profile.jpeg"
+              />
+            </div>
+          </div>
+          <div
+            className="swiper-slide"
+          >
+            <div
+              className="  rounded-lg cursor-pointer h-40 w-40 md:w-60 md:h-60 border-2  border-secondary "
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              <img
+                alt="animal profile "
+                className=" rounded-md w-full h-full hover:bg-gray-300 object-cover "
+                src="./testImages/dog.jpeg"
+              />
+            </div>
+          </div>
+          <div
+            className="swiper-slide"
+          >
+            <div
+              className="  rounded-lg cursor-pointer h-40 w-40 md:w-60 md:h-60 border-2  border-secondary "
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              <img
+                alt="animal profile "
+                className=" rounded-md w-full h-full hover:bg-gray-300 object-cover "
+                src="./testImages/cat2.jpeg"
+              />
+            </div>
+          </div>
+          <div
+            className="swiper-slide"
+          >
+            <div
+              className="  rounded-lg cursor-pointer h-40 w-40 md:w-60 md:h-60 border-2  border-secondary "
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              <img
+                alt="animal profile "
+                className=" rounded-md w-full h-full hover:bg-gray-300 object-cover "
+                src="./testImages/cat1.jpeg"
+              />
+            </div>
+          </div>
+          <div
+            className="swiper-slide"
+          >
+            <div
+              className="rounded-lg cursor-pointer h-40 w-40 md:w-60 md:h-60 border-2 border-secondary "
+            >
+              <button
+                className=" w-full h-full font-bold rounded-lg border-b-2 bg-gray-200 hover:bg-gray-300 text-secondary flex items-center justify-center"
+                onClick={[Function]}
+                type="button"
+              >
+                <svg
+                  className="h-3/6 w-3/6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

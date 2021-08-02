@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
-import "../styles/Home.module.css";
 
 function Hero() {
   const { t } = useTranslation("homePage");
