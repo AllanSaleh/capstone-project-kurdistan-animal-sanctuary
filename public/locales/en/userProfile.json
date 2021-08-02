@@ -2,6 +2,23 @@
   "userProfile": {
     "aboutMe": "About me",
     "myAnimals": "My Animals :",
-    "message": "message"
+    "message": "message",
+    "petType": "PET TYPE",
+    "breed": "BREED",
+    "age": "AGE",
+    "size": "SIZE",
+    "small": "small",
+    "medium": "medium",
+    "big": "big",
+    "gender": "GENDER",
+    "male": "male",
+    "female": "female",
+    "color": "COLOR",
+    "vaccinated": "Vaccinated",
+    "yes": "yes",
+    "no": "no",
+    "close": "close",
+    "submit": "submit",
+    "pics": "Upload images of your pet"
   }
 }
