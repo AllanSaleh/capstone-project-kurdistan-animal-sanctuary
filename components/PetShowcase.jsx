@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
+import firestore from "../services/firebase";
 
 const PetShowcase = () => {
+  const { t } = useTranslation("homePage");
+  const [users, setUsers] = useState([]);
+  const getdata = async () => {
+    const snapshot = await firestore.collection("animal photos").get();
+    const items = [];
+    snapshot.forEach((item) => items.push(item.data()));
+    setUsers(items);
+  };
+
+  useEffect(() => {
+    getdata();
+  }, []);
   const img = [
     {
       name: "Tomas",
@@ -24,15 +38,15 @@ const PetShowcase = () => {
     <section className=" w-full h-5/6 pb-16 bg-secondary font-Quicksand">
       <div className="">
         <h1 className="text-center mx-auto w-full pt-6 pb-10 text-3xl w-72 font-bold text-primary md:text-7xl ">
-          Make a Pet Happy
+          {t("homePage.makeApetHappy")}
         </h1>
         <div className="flex flex-col justify-around items-center px-20 md:px-24 md:flex-row">
-          {img.map((item) => (
-            <Link href="./">
+          {users.map((item) => (
+            <Link href="./AnimalProfile">
               <div className="card h-48 w-48 py-5  relative rounded-lg cursor-pointer md:h-80 md:w-80 md:mr-5 ">
                 <img
                   className="object-cover w-full h-full rounded-lg"
-                  src={item["image-path"]}
+                  src={item.photoUrl}
                   alt="animal profile "
                 />
 

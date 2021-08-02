@@ -1,0 +1,11 @@
+{
+  "signUp": {
+    "joinUs": "Join us",
+    "signUp": "Sign up",
+    "password": "Password",
+    "email": "Email",
+    "firstName": "First Name",
+    "LastName": "Last Name",
+    "Continue": "Or continue With"
+  }
+}

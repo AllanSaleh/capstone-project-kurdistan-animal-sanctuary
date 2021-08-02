@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`proparly renders the WhyAdopto component 1`] = `
+<div
+  className="bg-secondary py-6 "
+>
+  <h1
+    className="text-center text-primary text-4xl font-bold font-Quicksand "
+  >
+    homePage.whyAdopt
+  </h1>
+  <p
+    className="text-center p-6  text-lg text-primary md:px-64 font-Quicksand "
+  >
+    Here we will write a bit about what we do and why and the benfit of adopting animals and helping them, Here we will write a bit about what we do and why and the benfit of adopting animals and helping them
+  </p>
+</div>
+`;

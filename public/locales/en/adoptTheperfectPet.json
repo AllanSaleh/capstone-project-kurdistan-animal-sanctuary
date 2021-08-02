@@ -1,0 +1,21 @@
+{
+  "adoptTheperfectPet": {
+    "petType": "PET TYPE",
+    "breed": "BREED",
+    "age": "AGE",
+    "size": "SIZE",
+    "small": "small",
+    "medium": "medium",
+    "big": "big",
+    "gender": "GENDER",
+    "male": "male",
+    "female": "female",
+    "color": "COLOR",
+    "vaccinated": "Vaccinated",
+    "yes": "yes",
+    "no": "no",
+    "animalsNeedsAlovingHome": "Animals need a loving home",
+    "searchFilters": "Search Filters",
+    "adopt": "Adopt the perfect pet"
+  }
+}

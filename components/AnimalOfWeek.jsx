@@ -1,8 +1,10 @@
 import React from "react";
-
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
+import animalWeekData from "../mockData/AnimalOfTheWeekData";
 
 export default function AnimalOfWeek() {
+  const { t } = useTranslation("homePage");
   return (
     <div
       style={{ backgroundImage: "url(https://i.ibb.co/zGrMtLL/paw.png)" }}
@@ -10,7 +12,7 @@ export default function AnimalOfWeek() {
     >
       <div className="block p-7 px-4 md:px-24">
         <h1 className="pb-8 text-center text-primary text-3xl font-Quicksand font-bold">
-          Animal of the week
+          {t("homePage.AnimalOfWeek")}
         </h1>
         <div className="block md:flex">
           <div className="w-36 md:w-44 h-36 md:h-44 rounded-full mx-auto   ">
@@ -23,16 +25,7 @@ export default function AnimalOfWeek() {
             </Link>
           </div>
           <p className=" mx-auto md:mx-0  font-Quicksand text-justify w-10/12">
-            lorem ipsum dolor sit amet lorem, consectetur adipiscing elits
-            lorem. lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem,
-            consectetur adipiscing elits lorem. lorem ipsum dolor sit amet lorem
-            ipsum dolor sit amet lorem, consectetur adipiscing elits lorem.
-            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem,
-            consectetur adipiscing elits lorem. lorem ipsum dolor sit amet lorem
-            ipsum dolor sit amet lorem, consectetur adipiscing elits lorem.
-            lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem,
-            consectetur adipiscing elits lorem. lorem ipsum dolor sit amet lorem
-            ipsum dolor sit amet lorem, consectetur adipiscing elits lorem.
+            {animalWeekData[0].animal}
           </p>
         </div>
       </div>

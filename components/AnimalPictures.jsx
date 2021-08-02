@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import "./swiper.module.css";
@@ -10,13 +11,17 @@ import "swiper/components/pagination/pagination.min.css";
 SwiperCore.use([Navigation]);
 
 const UserAnimals = ({ animalID }) => {
+  const { t } = useTranslation("animalProfile");
   const animal = {
     id: animalID,
     picture: ["./profile.jpeg", "./dog.jpeg", "./cat2.jpeg", "./cat1.jpeg"],
   };
   return (
     <div className="py-12 pb-20">
-      <h1 className="font-bold text-primary text-3xl pb-8">Pictures of me</h1>
+      <h1 className="font-bold text-primary text-3xl pb-8">
+        {t("animalProfile.picturesOfMe")}
+      </h1>
+
       <Swiper
         breakpoints={{
           // when window width is >= 640px

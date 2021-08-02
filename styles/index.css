@@ -1,12 +1,79 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.animalContainer {
+  height: 39rem;
+}
+
+.AdoptThePerfectPet {
+  height: 723px;
+}
+
+.animalCardConatiner {
+  width: 1250px;
+}
+.bgSize {
+  background-size: contain;
+}
+.slider1 {
+  width: 50%;
+  margin: 2rem auto;
+  height: 200px;
+}
+.slide img {
+  width: 20rem;
+  margin: 0 auto;
+}
+.slide {
+  transform: scale(0.4);
+  transition: transform 600ms;
+  opacity: 0.5;
+}
+.activeSlide1 {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.arrow1 {
+  color: #a3d2ca;
+  transform: scale(4.5);
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow1:hover {
+  color: #056676;
+}
+/* .arrow1 svg {
+  transition: color 300;
+}
+.arrow1 svg:hover {
+  color: #a3d2ca;
+} */
+
+.next1 {
+  right: 0%;
+  top: 20%;
+}
+.prev1 {
+  left: 0%;
+  top: 20%;
+}
+.about {
+  left: 0%;
+  top: 10%;
+}
+
 .sliderImg,
 .slider,
 .imgContainer {
-  height: 520px;
+  height: 450px;
   width: 100%;
 }
 
@@ -32,5 +99,12 @@
 .prev {
   top: 50%;
   left: 5%;
+}
+
+.uploadImg {
+  border: 1px solid #056676;
+  display: inline-block;
+  padding: 15px 12px;
+  cursor: pointer;
 }
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");

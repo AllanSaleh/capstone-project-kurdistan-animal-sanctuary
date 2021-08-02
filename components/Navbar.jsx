@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import LoginandLanguage from "./LoginandLanguage";
 import MobileMenu from "./MobileMenu";
@@ -6,6 +7,7 @@ import Navbutton from "./Navbutton";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
+  const { t } = useTranslation("navbar");
 
   const handleclick = () => {
     if (display === true) {
@@ -30,11 +32,11 @@ const Navbar = () => {
         <div className="flex flex-row  items-center w-2/4 md:justify-around md:items-center">
           <div className="  float-right whitespace-nowrap hidden md:inline-block">
             <span>
-              <Navbutton name="Home" link="./" />
-              <Navbutton name="About" link="./" />
-              <Navbutton name="Contact" link="./" />
-              <Navbutton name="Adopt" link="./" />
-              <Navbutton name="Resources" link="./" />
+              <Navbutton name={t("navbar.Home")} link="./" />
+
+              <Navbutton name={t("navbar.Contact")} link="./ContactUs" />
+              <Navbutton name={t("navbar.Adopt")} link="./AdoptThePerfectPet" />
+              <Navbutton name={t("navbar.Resources")} link="./Resource" />
             </span>
             <LoginandLanguage />
           </div>
