@@ -2,7 +2,8 @@ const animalCardData = [
   {
     name: "mr.mitten",
     petType: "cat",
-    gender: "male",
+    gender: "nér",
+    genderName: "male",
     size: "small",
     breed: "maine coon",
     age: "1.9",
@@ -14,7 +15,8 @@ const animalCardData = [
   {
     name: "mr.kitten",
     petType: "cat",
-    gender: "female",
+    gender: "mé",
+    genderName: "female",
     breed: "siamese",
     age: "2",
     petColor: "white",
@@ -26,7 +28,8 @@ const animalCardData = [
   {
     name: "dodge",
     petType: "dog",
-    gender: "male",
+    gender: "nér",
+    genderName: "male",
     size: "big",
     breed: "labrador retriever",
     age: "0.6",
@@ -38,7 +41,8 @@ const animalCardData = [
   {
     name: "anakin",
     petType: "cat",
-    gender: "male",
+    gender: "nér",
+    genderName: "male",
     size: "big",
     breed: "ragdoll",
     age: "2",
@@ -50,7 +54,8 @@ const animalCardData = [
   {
     name: "zelda",
     petType: "cat",
-    gender: "female",
+    gender: "mé",
+    genderName: "female",
     size: "small",
     age: "1.5",
     petColor: "orange",
@@ -62,7 +67,8 @@ const animalCardData = [
   {
     name: "goldie",
     petType: "dog",
-    gender: "male",
+    gender: "nér",
+    genderName: "male",
     size: "big",
     breed: "golden retriever",
     age: "1",
@@ -74,7 +80,8 @@ const animalCardData = [
   {
     name: "long claw",
     petType: "cat",
-    gender: "male",
+    gender: "nér",
+    genderName: "male",
     size: "medium",
     breed: "munchkin",
     age: "1",
@@ -86,7 +93,8 @@ const animalCardData = [
   {
     name: "snowball",
     petType: "cat",
-    gender: "female",
+    gender: "mé",
+    genderName: "female",
     size: "small",
     breed: "persian",
     age: "1",
@@ -98,7 +106,8 @@ const animalCardData = [
   {
     name: "shiba",
     petType: "dog",
-    gender: "male",
+    gender: "nér",
+    genderName: "male",
     size: "small",
     breed: "poodle",
     age: "2",
@@ -110,7 +119,8 @@ const animalCardData = [
   {
     name: "dovakin",
     petType: "cat",
-    gender: "male",
+    gender: "nér",
+    genderName: "male",
     size: "small",
     breed: "savannah",
     age: "3",
@@ -122,7 +132,8 @@ const animalCardData = [
   {
     name: "misa",
     petType: "cat",
-    gender: "female",
+    gender: "mé",
+    genderName: "female",
     size: "small",
     breed: "siberian",
     age: "3",
@@ -134,7 +145,8 @@ const animalCardData = [
   {
     name: "omaye",
     petType: "dog",
-    gender: "male",
+    gender: "nér",
+    genderName: "male",
     size: "big",
     breed: "bulldog",
     age: "0.5",
@@ -146,7 +158,8 @@ const animalCardData = [
   {
     name: "valhala",
     petType: "cat",
-    gender: "male",
+    gender: "nér",
+    genderName: "male",
     size: "medium",
     breed: "van",
     age: "3",
@@ -158,7 +171,8 @@ const animalCardData = [
   {
     name: "thor",
     petType: "cat",
-    gender: "female",
+    gender: "mé",
+    genderName: "female",
     size: "small",
     breed: "bengal",
     petColor: "black",
@@ -169,7 +183,8 @@ const animalCardData = [
   {
     name: "kyojin",
     petType: "dog",
-    gender: "male",
+    gender: "nér",
+    genderName: "male",
     size: "small",
     breed: "german shepherd",
     age: "2.5",

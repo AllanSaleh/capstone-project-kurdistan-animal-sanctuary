@@ -33,7 +33,7 @@ const AnimalCard = (props) => {
                 />
                 <p className="mt-2.5 text-secondary">{animal.name}</p>
                 <div>
-                  <span>{animal.gender}</span>
+                  <span>{animal.genderName}</span>
                   <span className="ml-1">{animal.petType}</span>
                 </div>
               </div>
