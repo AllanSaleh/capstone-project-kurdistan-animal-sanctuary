@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useAuth } from "../contexts/AuthUserContext";
 
 const Signin = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+  const router = useRouter();
+  const { signInWithEmailAndPassword } = useAuth();
+
+  const onSubmit = (event) => {
+    setError(null);
+    signInWithEmailAndPassword(email, password)
+      .then((authUser) => {
+        router.push("/UserProfile");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+    event.preventDefault();
+  };
+
   const { t } = useTranslation("signIn");
   return (
     <div className="bg-background h-screen bg-clip-content bg-no-repeat  bg-cover flex">
@@ -9,32 +30,43 @@ const Signin = () => {
       <div className="m-auto bg-secondary bg-opacity-80 max-w-lg rounded-xl text-center w-80 md:w-96">
         <div className="w-60 md:w-80 m-auto ">
           {/*  inputs + button */}
-          <p className="text-primary text-5xl text-center font-Quicksand p-10">
-            {t("signIn.signIn")}
-          </p>
-          <div className="flex flex-col ">
-            <input
-              placeholder={t("signIn.email")}
-              className="border-2 mb-2 border-primary rounded text-primary pl-1"
-            />
-            <input
-              placeholder={t("signIn.password")}
-              className="border-2 mb-2 border-primary rounded text-primary pl-1"
-              type="password"
-            />
-          </div>
+          <form onSubmit={onSubmit}>
+            <p className="text-primary text-5xl text-center font-Quicksand p-10">
+              {t("signIn.signIn")}
+            </p>
+            <div className="flex flex-col ">
+              <input
+                placeholder={t("signIn.email")}
+                type="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                name="email"
+                id="loginEmail"
+                className="border-2 mb-2 border-primary rounded text-primary pl-1"
+              />
+              <input
+                placeholder={t("signIn.password")}
+                type="password"
+                name="password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                id="loginPassword"
+                className="border-2 mb-2 border-primary rounded text-primary pl-1"
+              />
+            </div>
 
-          <label htmlFor="membrme" className="text-primary">
-            <input type="checkbox" name="membrme" className="mb-4" />
-            {t("signIn.rememberMe")}
-          </label>
+            <label htmlFor="membrme" className="text-primary">
+              <input type="checkbox" name="membrme" className="mb-4" />
+              {t("signIn.rememberMe")}
+            </label>
 
-          <button
-            type="submit"
-            className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"
-          >
-            {t("signIn.signIn")}
-          </button>
+            <button
+              type="submit"
+              className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"
+            >
+              {t("signIn.signIn")}
+            </button>
+          </form>
         </div>
         <div className="text-center ">
           {/*  facebook + google + remaining text */}

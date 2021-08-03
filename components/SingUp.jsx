@@ -73,17 +73,6 @@ const Signup = () => {
                 type="password"
               />
             </div>
-            <div className="flex flex-row ml-9 sm:ml-0">
-              <input
-                placeholder={t("signUp.firstName")}
-                className="border border-primary rounded text-primary text-sm w-28 sm:w-30 h-10 bg-secondary pl-1"
-              />
-              <span className="mr-6" />
-              <input
-                placeholder={t("signUp.LastName")}
-                className="border mb-6 border-primary rounded text-primary text-sm w-28 w-30 h-10 bg-secondary pl-1"
-              />
-            </div>
             <button
               type="submit"
               className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"
