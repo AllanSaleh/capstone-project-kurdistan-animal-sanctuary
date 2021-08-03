@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
-import { useAuth } from "../context/AuthUserContext";
+import { useAuth } from "../contexts/AuthUserContext";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +21,7 @@ const Signup = () => {
       createUserWithEmailAndPassword(email, passwordOne)
         .then((authUser) => {
           console.log("Success. The user is created in Firebase");
-          router.push("/logged_in");
+          router.push("/UserProfile");
         })
         .catch((error) => {
           // An error occurred. Set error message to be displayed to user
