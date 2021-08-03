@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import LoginandLanguage from "./LoginandLanguage";
 import MobileMenu from "./MobileMenu";
 import Navbutton from "./Navbutton";
+import { useAuth } from "../contexts/AuthUserContext";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
   const { t } = useTranslation("navbar");
-
+  const { authUser, loading, signOut } = useAuth();
+  const [logState, setLogState] = useState(false);
   const handleclick = () => {
     if (display === true) {
       setDisplay(false);
@@ -16,7 +18,13 @@ const Navbar = () => {
       setDisplay(true);
     }
   };
-
+  useEffect(() => {
+    if (!loading && !authUser) {
+      setLogState(false);
+    } else {
+      setLogState(true);
+    }
+  }, [authUser, loading]);
   return (
     <div>
       <nav className="flex flex-row-reverse  md:flex-row bg-primary  py-6 px-2 h-20 md:h-24 justify-items-center font-Quicksand">
@@ -37,6 +45,15 @@ const Navbar = () => {
               <Navbutton name={t("navbar.Contact")} link="./ContactUs" />
               <Navbutton name={t("navbar.Adopt")} link="./AdoptThePerfectPet" />
               <Navbutton name={t("navbar.Resources")} link="./Resource" />
+              {logState && (
+                <button
+                  type="button"
+                  className="mr-3 text-gray-300 hover:text-highlight"
+                  onClick={signOut}
+                >
+                  Sign Out
+                </button>
+              )}
             </span>
             <LoginandLanguage />
           </div>

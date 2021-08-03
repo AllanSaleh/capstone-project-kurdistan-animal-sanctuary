@@ -9,23 +9,14 @@ const login = () => {
   const router = useRouter();
   const { t } = useTranslation("navbar");
 
-  // const Logging = () => {
-  //   if (logState === true) {
-  //     setLogState(false);
-  //   } else {
-  //     setLogState(true);
-  //   }
-  // };
-
   const { authUser, loading } = useAuth();
-  //const router = useRouter();
 
   // Listen for changes on loading and authUser, redirect if needed
   useEffect(() => {
     if (!loading && !authUser) {
-      setLogState(true);
-    } else {
       setLogState(false);
+    } else {
+      setLogState(true);
     }
   }, [authUser, loading]);
   return (
@@ -38,12 +29,7 @@ const login = () => {
         }
       >
         <Link href="./UserProfile">
-          <button
-            type="button"
-            onClick={() => {
-              router.push("/UserProfile");
-            }}
-          >
+          <button type="button">
             <img
               className="w-16 h-16  cursor-pointer  rounded-full   "
               src="./profile.png"
@@ -61,9 +47,6 @@ const login = () => {
           <button
             type="button"
             className="mr-3.5 w-28 h-10 text-highlight border-2 border-highlight rounded-lg "
-            onClick={() => {
-              router.push("/UserProfile");
-            }}
           >
             {t("navbar.Login")}
           </button>
