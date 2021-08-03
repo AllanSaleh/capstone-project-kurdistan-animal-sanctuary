@@ -73,6 +73,7 @@ const Signup = () => {
                 type="password"
               />
             </div>
+
             <button
               type="submit"
               className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"

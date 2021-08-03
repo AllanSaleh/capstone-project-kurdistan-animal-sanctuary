@@ -1,20 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
+import { useAuth } from "../contexts/AuthUserContext";
 
 const login = () => {
   const [logState, setLogState] = useState(false);
   const router = useRouter();
   const { t } = useTranslation("navbar");
 
-  const Logging = () => {
-    if (logState === true) {
-      setLogState(false);
-    } else {
+  // const Logging = () => {
+  //   if (logState === true) {
+  //     setLogState(false);
+  //   } else {
+  //     setLogState(true);
+  //   }
+  // };
+
+  const { authUser, loading } = useAuth();
+  //const router = useRouter();
+
+  // Listen for changes on loading and authUser, redirect if needed
+  useEffect(() => {
+    if (!loading && !authUser) {
       setLogState(true);
+    } else {
+      setLogState(false);
     }
-  };
+  }, [authUser, loading]);
   return (
     <span>
       <span
@@ -28,7 +41,7 @@ const login = () => {
           <button
             type="button"
             onClick={() => {
-              Logging();
+              router.push("/UserProfile");
             }}
           >
             <img
@@ -49,7 +62,7 @@ const login = () => {
             type="button"
             className="mr-3.5 w-28 h-10 text-highlight border-2 border-highlight rounded-lg "
             onClick={() => {
-              Logging();
+              router.push("/UserProfile");
             }}
           >
             {t("navbar.Login")}
