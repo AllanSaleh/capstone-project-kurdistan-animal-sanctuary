@@ -11,41 +11,55 @@ exports[`proparly renders the Signin component 1`] = `
     <div
       className="w-60 md:w-80 m-auto "
     >
-      <p
-        className="text-primary text-5xl text-center font-Quicksand p-10"
+      <form
+        onSubmit={[Function]}
       >
-        signIn.signIn
-      </p>
-      <div
-        className="flex flex-col "
-      >
-        <input
-          className="border-2 mb-2 border-primary rounded text-primary pl-1"
-          placeholder="signIn.email"
-        />
-        <input
-          className="border-2 mb-2 border-primary rounded text-primary pl-1"
-          placeholder="signIn.password"
-          type="password"
-        />
-      </div>
-      <label
-        className="text-primary"
-        htmlFor="membrme"
-      >
-        <input
-          className="mb-4"
-          name="membrme"
-          type="checkbox"
-        />
-        signIn.rememberMe
-      </label>
-      <button
-        className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"
-        type="submit"
-      >
-        signIn.signIn
-      </button>
+        <p
+          className="text-primary text-4xl sm:text-5xl text-center font-Quicksand p-10 font-bold"
+        >
+          signIn.signIn
+        </p>
+        <div
+          className="flex flex-col "
+        >
+          <input
+            className="border mb-6 border-primary rounded text-primary text-sm h-10 bg-secondary"
+            faIcon="envelope"
+            id="loginEmail"
+            name="email"
+            onChange={[Function]}
+            placeholder="signIn.email"
+            type="email"
+            value=""
+          />
+          <input
+            className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary"
+            id="loginPassword"
+            name="password"
+            onChange={[Function]}
+            placeholder="signIn.password"
+            type="password"
+            value=""
+          />
+        </div>
+        <label
+          className="text-primary"
+          htmlFor="membrme"
+        >
+          <input
+            className="mb-4"
+            name="membrme"
+            type="checkbox"
+          />
+          signIn.rememberMe
+        </label>
+        <button
+          className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"
+          type="submit"
+        >
+          signIn.signIn
+        </button>
+      </form>
     </div>
     <div
       className="text-center "
@@ -55,7 +69,7 @@ exports[`proparly renders the Signin component 1`] = `
       >
         <span>
           <a
-            href="https://twitter.com/"
+            href="http://www.facebook.com"
           >
             <img
               alt="fb"
@@ -66,7 +80,7 @@ exports[`proparly renders the Signin component 1`] = `
         </span>
         <span>
           <a
-            href="http://www.facebook.com"
+            href="https://twitter.com/"
           >
             <img
               alt="twitter"
