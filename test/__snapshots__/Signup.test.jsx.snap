@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`proparly renders the SingUp component 1`] = `
+<div
+  className="bg-background h-screen bg-clip-content bg-no-repeat  bg-cover flex"
+>
+  <backgroundImage />
+  <div
+    className="mx-5 my-auto sm:m-auto bg-secondary bg-opacity-80 max-w-lg rounded-xl text-center w-96 "
+  >
+    <div
+      className="w-80 m-auto "
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <p
+          className="text-primary text-4xl sm:text-5xl text-center font-Quicksand p-10 font-bold"
+        >
+          signUp.joinUs
+        </p>
+        <div
+          className="flex flex-col "
+        >
+          <input
+            className="border mb-6 border-primary rounded text-primary text-sm h-10 bg-secondary pl-1"
+            faIcon="envelope"
+            id="signUpEmail"
+            name="email"
+            onChange={[Function]}
+            placeholder="signUp.email"
+            type="email"
+            value=""
+          />
+          <input
+            className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary pl-1"
+            id="signUpPassword"
+            name="passwordOne"
+            onChange={[Function]}
+            placeholder="signUp.password"
+            type="password"
+            value=""
+          />
+          <input
+            className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary pl-1"
+            id="signUpPassword2"
+            name="password"
+            onChange={[Function]}
+            placeholder="signUp.password"
+            type="password"
+            value=""
+          />
+        </div>
+        <button
+          className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"
+          type="submit"
+        >
+          signUp.signUp
+        </button>
+      </form>
+    </div>
+    <div
+      className="text-center text-primary font-Quicksand text-sm font-bold"
+    >
+      <h1>
+        signUp.Continue
+      </h1>
+       
+      <br />
+      <div
+        className="flex flex-row items-center justify-center  pb-4 sm:p-8"
+      >
+        <span>
+          <a
+            href="www.facebook.com"
+          >
+            <img
+              alt="fb"
+              className="w-10"
+              src="https://seeklogo.com/images/F/facebook-icon-circle-logo-09F32F61FF-seeklogo.com.png"
+            />
+          </a>
+        </span>
+        <span
+          className="ml-10"
+        />
+        <span>
+          <a
+            href="www.Google.com"
+          >
+            <img
+              alt="Google"
+              className="w-10"
+              src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png"
+            />
+          </a>
+        </span>
+        <span
+          className="ml-10"
+        />
+        <span>
+          <a
+            href="www.Twitter.com"
+          >
+            <img
+              alt="Twitter"
+              className="w-10"
+              src="https://seeklogo.com/images/T/twitter-icon-circle-blue-logo-0902F48837-seeklogo.com.png"
+            />
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

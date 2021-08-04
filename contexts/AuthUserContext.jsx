@@ -1,4 +1,4 @@
-import { createContext, useContext, Context } from "react";
+import React,{ createContext, useContext, Context } from "react";
 import useFirebaseAuth from "../utils/useFirebaseAuth";
 
 const authUserContext = createContext({

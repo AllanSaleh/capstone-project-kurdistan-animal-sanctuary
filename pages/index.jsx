@@ -1,5 +1,6 @@
 import React from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Whyadopt from "../components/WhyAdopt";

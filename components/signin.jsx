@@ -31,18 +31,19 @@ const Signin = () => {
         <div className="w-60 md:w-80 m-auto ">
           {/*  inputs + button */}
           <form onSubmit={onSubmit}>
-            <p className="text-primary text-5xl text-center font-Quicksand p-10">
+            <p className="text-primary text-4xl sm:text-5xl text-center font-Quicksand p-10 font-bold">
               {t("signIn.signIn")}
             </p>
             <div className="flex flex-col ">
               <input
                 placeholder={t("signIn.email")}
+                faIcon="envelope"
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 name="email"
                 id="loginEmail"
-                className="border-2 mb-2 border-primary rounded text-primary pl-1"
+                className="border mb-6 border-primary rounded text-primary text-sm h-10 bg-secondary"
               />
               <input
                 placeholder={t("signIn.password")}
@@ -51,7 +52,7 @@ const Signin = () => {
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
                 id="loginPassword"
-                className="border-2 mb-2 border-primary rounded text-primary pl-1"
+                className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary"
               />
             </div>
 
@@ -72,7 +73,7 @@ const Signin = () => {
           {/*  facebook + google + remaining text */}
           <div className="flex justify-evenly ">
             <span>
-              <a href="https://twitter.com/">
+              <a href="http://www.facebook.com">
                 <img
                   alt="fb"
                   className="w-10 "
@@ -81,7 +82,7 @@ const Signin = () => {
               </a>
             </span>
             <span>
-              <a href="http://www.facebook.com">
+              <a href="https://twitter.com/">
                 <img
                   alt="twitter"
                   className="w-10 "

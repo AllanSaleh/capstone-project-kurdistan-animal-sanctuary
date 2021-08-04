@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`proparly renders the UserDescription component 1`] = `
+<div
+  className="  "
+>
+  <h1
+    className=" font-bold text-primary text-3xl pb-8"
+  >
+    userProfile.aboutMe
+  </h1>
+  <p
+    className="text-sm md:text-lg text-primary"
+  />
+</div>
+`;
