@@ -7,6 +7,7 @@ const login = () => {
   const [logState, setLogState] = useState(false);
   const router = useRouter();
   const { t } = useTranslation("navbar");
+  const { asPath } = useRouter();
 
   const Logging = () => {
     if (logState === true) {
@@ -71,7 +72,7 @@ const login = () => {
             : "bg-secondary text-sm text-white leading-none  rounded-full inline-flex mt-6 mb-4 md:mb-0 sm:mt-0 ml-24  sm:ml-14"
         }
       >
-        <Link href="/" locale={router.locale === "en" ? "kd" : "en"}>
+        <Link href={asPath} locale={router.locale === "en" ? "kd" : "en"}>
           <button
             className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-black focus:text-primary foucs:bg-primary rounded-l-full px-4 py-2 active"
             type="button"
