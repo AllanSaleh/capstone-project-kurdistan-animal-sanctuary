@@ -25,7 +25,7 @@ const AnimalCard = (props) => {
           )
           .map((animal) => (
             <a href="#">
-              <div className="border border-black flex flex-col w-56 rounded-md items-center h-48 mt-2 mx-8">
+              <div className="border border-black flex flex-col rounded-md items-center h-48 mt-2 mx-8">
                 <img
                   className="w-56 h-28 rounded-md"
                   src={animal.imgURL}

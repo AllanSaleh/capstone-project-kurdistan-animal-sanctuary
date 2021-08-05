@@ -36,7 +36,7 @@ const SuccessStories = () => {
         {stories.map((slide) => (
           <div className="imgContainer relative">
             <img
-              className="sliderImg relative filter brightness-50"
+              className="sliderImg relative filter brightness-50 object-cover"
               src={slide.imgURL}
               alt="animals being in their forever home"
             />
