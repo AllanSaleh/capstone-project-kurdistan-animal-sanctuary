@@ -1,7 +1,7 @@
-import firebase from "firebase/app";
-import "firebase/firestore";
+import Firebase from "Firebase/app";
+import "Firebase/auth";
 
-const config = {
+const FirebaseCredentials = {
   apiKey: "AIzaSyAAM2pSEHaENibmPxpyy-qRkscuzZCCbGE",
   authDomain: "kurdistan-animal-sanctuary.firebaseapp.com",
   projectId: "kurdistan-animal-sanctuary",
@@ -9,11 +9,9 @@ const config = {
   messagingSenderId: "550205779361",
   appId: "1:`550205779361:web:e38c06eebca2543f276fe0",
 };
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(config);
+// if a Firebase instance doesn't exist, create one
+if (!Firebase.apps.length) {
+  Firebase.initializeApp(FirebaseCredentials);
 }
 
-const firestore = firebase.firestore();
-
-export default firestore;
+export default Firebase;

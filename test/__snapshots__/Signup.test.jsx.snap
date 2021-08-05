@@ -11,46 +11,53 @@ exports[`proparly renders the SingUp component 1`] = `
     <div
       className="w-80 m-auto "
     >
-      <p
-        className="text-primary text-4xl sm:text-5xl text-center font-Quicksand p-10 font-bold"
+      <form
+        onSubmit={[Function]}
       >
-        signUp.joinUs
-      </p>
-      <div
-        className="flex flex-col "
-      >
-        <input
-          className="border mb-6 border-primary rounded text-primary text-sm h-10 bg-secondary pl-1"
-          faIcon="envelope"
-          placeholder="signUp.email"
-        />
-        <input
-          className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary pl-1"
-          placeholder="signUp.password"
-          type="password"
-        />
-      </div>
-      <div
-        className="flex flex-row ml-9 sm:ml-0"
-      >
-        <input
-          className="border border-primary rounded text-primary text-sm w-28 sm:w-30 h-10 bg-secondary pl-1"
-          placeholder="signUp.firstName"
-        />
-        <span
-          className="mr-6"
-        />
-        <input
-          className="border mb-6 border-primary rounded text-primary text-sm w-28 w-30 h-10 bg-secondary pl-1"
-          placeholder="signUp.LastName"
-        />
-      </div>
-      <button
-        className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"
-        type="submit"
-      >
-        signUp.signUp
-      </button>
+        <p
+          className="text-primary text-4xl sm:text-5xl text-center font-Quicksand p-10 font-bold"
+        >
+          signUp.joinUs
+        </p>
+        <div
+          className="flex flex-col "
+        >
+          <input
+            className="border mb-6 border-primary rounded text-primary text-sm h-10 bg-secondary pl-1"
+            faIcon="envelope"
+            id="signUpEmail"
+            name="email"
+            onChange={[Function]}
+            placeholder="signUp.email"
+            type="email"
+            value=""
+          />
+          <input
+            className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary pl-1"
+            id="signUpPassword"
+            name="passwordOne"
+            onChange={[Function]}
+            placeholder="signUp.password"
+            type="password"
+            value=""
+          />
+          <input
+            className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary pl-1"
+            id="signUpPassword2"
+            name="password"
+            onChange={[Function]}
+            placeholder="signUp.password"
+            type="password"
+            value=""
+          />
+        </div>
+        <button
+          className="place-items-center text rounded text-center mb-6 py-2 px-20 font-bold text-primary bg-highlight hover:bg-darken"
+          type="submit"
+        >
+          signUp.signUp
+        </button>
+      </form>
     </div>
     <div
       className="text-center text-primary font-Quicksand text-sm font-bold"
