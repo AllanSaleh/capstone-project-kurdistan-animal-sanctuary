@@ -19,7 +19,7 @@ const AdoptThePerfectPet = () => {
     setAllValues({ ...allValues, [e.target.name]: e.target.value });
   };
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col">
       <div className="h-40 bg-adopt_perfect_pet_header w-full h-40 flex flex-col justify-center item-center">
         <p className="inline-block w-4/5 text-center w-full text-4xl sm:text-5xl text-white">
           {t("adoptTheperfectPet.adopt")}
