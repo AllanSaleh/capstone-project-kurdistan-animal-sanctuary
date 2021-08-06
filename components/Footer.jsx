@@ -15,7 +15,7 @@ export default function footer() {
             className="justify-self-end m-auto w-20 h-20 md:w-36 md:h-36  "
           />
         </div>
-        <div className=" mb-5 md:mb-0 md:pt-5 md:pl-24 inline-block text-lg md:text-2xl w-96">
+        <div className=" w-11/12 md:w-96 mb-5 md:mb-0 md:pt-5 md:pl-24 inline-block text-lg md:text-2xl ">
           <h1 className=" text-primary font-bold font-Quicksand">
             {t("footer.aboutus")}
           </h1>
