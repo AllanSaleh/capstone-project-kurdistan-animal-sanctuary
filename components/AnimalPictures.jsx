@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import PropTypes from "prop-types";
 import Link from "next/link";
@@ -10,12 +10,13 @@ import "swiper/components/pagination/pagination.min.css";
 
 SwiperCore.use([Navigation]);
 
-const UserAnimals = ({ animalID }) => {
+const UserAnimals = ({ collection }) => {
   const { t } = useTranslation("animalProfile");
-  const animal = {
-    id: animalID,
-    picture: ["./profile.jpeg", "./dog.jpeg", "./cat2.jpeg", "./cat1.jpeg"],
-  };
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(collection);
+  }, []);
   return (
     <div className="py-12 pb-20">
       <h1 className="font-bold text-primary text-3xl pb-8">
@@ -37,7 +38,7 @@ const UserAnimals = ({ animalID }) => {
           clickable: true,
         }}
       >
-        {animal.picture.map((item) => (
+        {data.map((item) => (
           <SwiperSlide>
             <Link href="./">
               <div className="rounded-lg cursor-pointer h-40 w-40 md:w-60 md:h-60 border-2  border-secondary ">
@@ -55,6 +56,6 @@ const UserAnimals = ({ animalID }) => {
   );
 };
 UserAnimals.propTypes = {
-  animalID: PropTypes.number.isRequired,
+  collection: PropTypes.objectOf.isRequired,
 };
 export default UserAnimals;
