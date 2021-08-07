@@ -9,6 +9,7 @@ module.exports = {
       backgroundImage: () => ({
         adopt_perfect_pet_header: "url('/images/bg.png')",
         background: "url('../public/bg.png')",
+        paw: "url('../public/paw.png')",
       }),
       backgroundColor: (theme) => ({
         ...theme("colors"),
