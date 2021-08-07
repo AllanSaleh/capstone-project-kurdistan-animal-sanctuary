@@ -1,93 +1,104 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper/core";
+import firestore from "../services/firebase";
 
 SwiperCore.use([Navigation]);
 
 const UserAnimals = () => {
   const { t } = useTranslation("userProfile");
-  const userpets = {
-    animals: [
-      {
-        name: "Zeus",
-        sex: "Male",
-        age: 5,
-        vaccinated: "Yes",
-        shelter: "120- Ankawa road",
-        profilepic:
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fprofile.jpg?alt=media&token=fca2330f-4707-4e64-8969-e7f4198c0a91",
-        myPhotos: [
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2F1.jpg?alt=media&token=8bbcc19a-5ed5-4ae1-a34f-87f978c9b5fc",
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2F2.jpg?alt=media&token=4d7ba5e6-2bf4-46f2-b280-1d5ea3f6cb80",
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2F3.jpg?alt=media&token=3cd0064c-d75c-4e9c-abc1-667c7a2abfa0",
-        ],
-        about:
-          "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-        preference:
-          "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-      },
-      {
-        name: "Edgar",
-        sex: "Female",
-        age: 4,
-        vaccinated: "Yes",
-        shelter: "120- Ankawa road",
-        profilepic:
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fprofile%20edgar.jpg?alt=media&token=53d0180e-d79a-4e44-ba17-8b28c11ac0b5",
-        myPhotos: [
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fedgar%201.jpg?alt=media&token=e4b06505-3463-4802-ad45-29e3a4ffc203",
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fedgar%202.jpg?alt=media&token=782c1320-2f46-4fe1-93c0-71f8e07d97f2",
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fedgar%203.jpg?alt=media&token=eb6c5c91-e871-488e-8f80-26a5d015922f",
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fedgar%204.jpg?alt=media&token=c83f248b-5ab4-4f05-abfe-75d67a71bc67",
-        ],
-        about:
-          "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-        preference:
-          "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-      },
-      {
-        name: "Nala",
-        sex: "Female",
-        age: 1,
-        shelter: "120- Ankawa road",
-        vaccinated: "Yes",
-        profilepic:
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FNala%20profile.jpg?alt=media&token=aedff2fd-ba39-4e36-8dad-c8145b6addc6",
-        myPhotos: [
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FNala%201.jpg?alt=media&token=a4512324-cc54-4cff-88c2-81c9ae931b27",
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FNala%202.jpg?alt=media&token=4a60108e-c4e0-4843-8c04-0f7f1c56bd1d",
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FNala%203.jpg?alt=media&token=c7516c9c-6645-4322-a891-b494452a8693",
-        ],
-
-        about:
-          "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-        preference:
-          "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-      },
-      {
-        name: "Loki",
-        sex: "Male",
-        age: 2,
-        shelter: "120- Ankawa road",
-        vaccinated: "Yes",
-        profilepic:
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FLoki%20profile.jpg?alt=media&token=89671b74-9e75-4d3a-bd0c-ceac004ba669",
-        myPhotos: [
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FLoki%201.jpg?alt=media&token=474bb40c-8ade-46bd-b10c-065675098ef7",
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FLoki%202.jpg?alt=media&token=b0909f8a-56aa-4b89-82dc-f057306e8ff4",
-          "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FLoki%203.jpg?alt=media&token=1f5a85e5-a43a-4837-9604-a4bdb9d36fdb",
-        ],
-        about:
-          "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-        preference:
-          "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-      },
-    ],
+  const [animals, setAnimals] = useState([]);
+  const getdata = async () => {
+    const snapshot = await firestore.collection("UserAnimals").get();
+    const items = [];
+    snapshot.forEach((item) => items.push(item.data()));
+    setAnimals(items);
   };
+
+  useEffect(() => {
+    getdata();
+  }, []);
+  // const userpets = {
+  //   animals: [
+  //     {
+  //       name: "Zeus",
+  //       sex: "Male",
+  //       age: 5,
+  //       vaccinated: "Yes",
+  //       shelter: "120- Ankawa road",
+  //       profilepic:
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fprofile.jpg?alt=media&token=fca2330f-4707-4e64-8969-e7f4198c0a91",
+  //       myPhotos: [
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2F1.jpg?alt=media&token=8bbcc19a-5ed5-4ae1-a34f-87f978c9b5fc",
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2F2.jpg?alt=media&token=4d7ba5e6-2bf4-46f2-b280-1d5ea3f6cb80",
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2F3.jpg?alt=media&token=3cd0064c-d75c-4e9c-abc1-667c7a2abfa0",
+  //       ],
+  //       about:
+  //         "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
+  //       preference:
+  //         "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
+  //     },
+  //     {
+  //       name: "Edgar",
+  //       sex: "Female",
+  //       age: 4,
+  //       vaccinated: "Yes",
+  //       shelter: "120- Ankawa road",
+  //       profilepic:
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fprofile%20edgar.jpg?alt=media&token=53d0180e-d79a-4e44-ba17-8b28c11ac0b5",
+  //       myPhotos: [
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fedgar%201.jpg?alt=media&token=e4b06505-3463-4802-ad45-29e3a4ffc203",
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fedgar%202.jpg?alt=media&token=782c1320-2f46-4fe1-93c0-71f8e07d97f2",
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fedgar%203.jpg?alt=media&token=eb6c5c91-e871-488e-8f80-26a5d015922f",
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2Fedgar%204.jpg?alt=media&token=c83f248b-5ab4-4f05-abfe-75d67a71bc67",
+  //       ],
+  //       about:
+  //         "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
+  //       preference:
+  //         "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
+  //     },
+  //     {
+  //       name: "Nala",
+  //       sex: "Female",
+  //       age: 1,
+  //       shelter: "120- Ankawa road",
+  //       vaccinated: "Yes",
+  //       profilepic:
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FNala%20profile.jpg?alt=media&token=aedff2fd-ba39-4e36-8dad-c8145b6addc6",
+  //       myPhotos: [
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FNala%201.jpg?alt=media&token=a4512324-cc54-4cff-88c2-81c9ae931b27",
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FNala%202.jpg?alt=media&token=4a60108e-c4e0-4843-8c04-0f7f1c56bd1d",
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FNala%203.jpg?alt=media&token=c7516c9c-6645-4322-a891-b494452a8693",
+  //       ],
+
+  //       about:
+  //         "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
+  //       preference:
+  //         "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
+  //     },
+  //     {
+  //       name: "Loki",
+  //       sex: "Male",
+  //       age: 2,
+  //       shelter: "120- Ankawa road",
+  //       vaccinated: "Yes",
+  //       profilepic:
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FLoki%20profile.jpg?alt=media&token=89671b74-9e75-4d3a-bd0c-ceac004ba669",
+  //       myPhotos: [
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FLoki%201.jpg?alt=media&token=474bb40c-8ade-46bd-b10c-065675098ef7",
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FLoki%202.jpg?alt=media&token=b0909f8a-56aa-4b89-82dc-f057306e8ff4",
+  //         "https://firebasestorage.googleapis.com/v0/b/kurdistan-animal-sanctuary.appspot.com/o/Animal%20photos%2FLoki%203.jpg?alt=media&token=1f5a85e5-a43a-4837-9604-a4bdb9d36fdb",
+  //       ],
+  //       about:
+  //         "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
+  //       preference:
+  //         "Lorem Ipsum is simply dummy jhkhtext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
+  //     },
+  //   ],
+  // };
 
   const [modalISOpen, setModalIsOpen] = useState(false);
 
@@ -264,7 +275,7 @@ const UserAnimals = () => {
           clickable: true,
         }}
       >
-        {userpets.animals.map((item) => (
+        {animals.map((item) => (
           <SwiperSlide>
             <Link
               href={{
