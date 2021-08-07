@@ -3,7 +3,7 @@ import { SocialIcon } from "react-social-icons";
 export default function footer() {
   return (
     // eslint-disable-next-line react/react-in-jsx-scope
-    <footer className="w-full h-96 pt-10 bg-secondary text-2xl bg-paw  bg-no-repeat  bg-cover font-Quicksand">
+    <footer className="w-full h-96 pt-10 bg-paw bg-secondary text-2xl  bg-no-repeat  bg-cover font-Quicksand">
       <div className=" md:block-inline mx-5 justify-center mx-8 md:mx-0 md:pl-56 md:py-5">
         <div className=" hidden w-20 md:h-40 md:w-40 md:inline-block relative ">
           <img

@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: () => ({
         background: "url('../public/bg.png')",
+        paw: "url(.../public/paw3.png)",
       }),
       backgroundColor: (theme) => ({
         ...theme("colors"),
