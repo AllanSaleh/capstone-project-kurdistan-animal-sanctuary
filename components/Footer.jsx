@@ -6,7 +6,7 @@ export default function footer() {
   const { t } = useTranslation("footer");
   return (
     // eslint-disable-next-line react/react-in-jsx-scope
-    <footer className="w-full h-96 pt-10 bg-secondary text-2xl bg-paw  bg-no-repeat  bg-cover font-Quicksand">
+    <footer className="w-full h-96 pt-10 bg-secondary text-2xl bg-paw  bg-no-repeat  bg-contain  bg-left font-Quicksand">
       <div className=" md:block-inline mx-5 justify-center mx-8 md:mx-0 md:pl-56 md:py-5">
         <div className=" hidden w-20 md:h-40 md:w-40 md:inline-block relative ">
           <img
@@ -15,7 +15,7 @@ export default function footer() {
             className="justify-self-end m-auto w-20 h-20 md:w-36 md:h-36  "
           />
         </div>
-        <div className=" mb-5 md:mb-0 md:pt-5 md:pl-24 inline-block text-lg md:text-2xl w-96">
+        <div className=" w-11/12 md:w-96 mb-5 md:mb-0 md:pt-5 md:pl-24 inline-block text-lg md:text-2xl ">
           <h1 className=" text-primary font-bold font-Quicksand">
             {t("footer.aboutus")}
           </h1>
