@@ -1,37 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { useTranslation } from "next-i18next";
-import PropTypes from "prop-types";
 import Link from "next/link";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper/core";
+import firestore from "../services/firebase";
 
 SwiperCore.use([Navigation]);
 
-const UserAnimals = ({ userid }) => {
+const UserAnimals = () => {
   const { t } = useTranslation("userProfile");
-  const userpets = {
-    animals: [
-      {
-        owner: userid,
-        id: 2,
-        imgPath: "./testImages/profile.jpeg",
-      },
-      {
-        id: 4,
-        imgPath: "./testImages/dog.jpeg",
-      },
-      {
-        id: 4,
-        imgPath: "./testImages/cat2.jpeg",
-      },
-      {
-        id: 4,
-        imgPath: "./testImages/cat1.jpeg",
-      },
-    ],
+  const [animals, setAnimals] = useState([]);
+  const getdata = async () => {
+    const snapshot = await firestore.collection("UserAnimals").get();
+    const items = [];
+    snapshot.forEach((item) => items.push(item.data()));
+    setAnimals(items);
   };
+
+  useEffect(() => {
+    getdata();
+  }, []);
 
   const [modalISOpen, setModalIsOpen] = useState(false);
 
@@ -208,13 +197,28 @@ const UserAnimals = ({ userid }) => {
           clickable: true,
         }}
       >
-        {userpets.animals.map((item) => (
+        {animals.map((item) => (
           <SwiperSlide>
-            <Link href="./AnimalProfile">
+            <Link
+              href={{
+                pathname: "/AnimalProfile",
+                query: {
+                  name: item.name,
+                  photo: item.profilepic,
+                  sex: item.sex,
+                  age: item.age,
+                  vaccinated: item.vaccinated,
+                  about: item.about,
+                  WhatILike: item.preference,
+                  shelter: item.shelter,
+                  collection: item.myPhotos,
+                },
+              }}
+            >
               <div className="  rounded-lg cursor-pointer h-40 w-40 md:w-60 md:h-60 border-2  border-secondary ">
                 <img
                   className=" rounded-md w-full h-full hover:bg-gray-300 object-cover "
-                  src={item.imgPath}
+                  src={item.profilepic}
                   alt="animal profile "
                 />
               </div>
@@ -244,7 +248,5 @@ const UserAnimals = ({ userid }) => {
     </div>
   );
 };
-UserAnimals.propTypes = {
-  userid: PropTypes.number.isRequired,
-};
+
 export default UserAnimals;
