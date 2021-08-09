@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
@@ -11,8 +12,12 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   // let name = 'Allan';
+  const { t } = useTranslation("navbar");
   return (
     <>
+      <head>
+        <title>{t("navbar.Home")}</title>
+      </head>
       <Navbar />
       <Hero />
       <Whyadopt />

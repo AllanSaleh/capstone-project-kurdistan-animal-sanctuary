@@ -10,9 +10,7 @@ export default function whyAdopt() {
         {t("homePage.whyAdopt")}
       </h1>
       <p className="text-center p-6  text-lg text-primary md:px-64 font-Quicksand ">
-        Here we will write a bit about what we do and why and the benfit of
-        adopting animals and helping them, Here we will write a bit about what
-        we do and why and the benfit of adopting animals and helping them
+        {t("homePage.whyAdoptPara")}
       </p>
     </div>
   );
