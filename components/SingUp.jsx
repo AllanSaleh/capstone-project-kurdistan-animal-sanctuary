@@ -15,17 +15,16 @@ const Signup = () => {
 
   const onSubmit = (event) => {
     setError(null);
-    //check if passwords match. If they do, create user in Firebase
+    // check if passwords match. If they do, create user in Firebase
     // and redirect to your logged in page.
     if (passwordOne === passwordTwo)
       createUserWithEmailAndPassword(email, passwordOne)
         .then((authUser) => {
-          console.log("Success. The user is created in Firebase");
           router.push("/UserProfile");
         })
-        .catch((error) => {
+        .catch((err) => {
           // An error occurred. Set error message to be displayed to user
-          setError(error.message);
+          setError(err.message);
         });
     else setError("Password do not match");
     event.preventDefault();
@@ -60,7 +59,6 @@ const Signup = () => {
                 onChange={(event) => setPasswordOne(event.target.value)}
                 id="signUpPassword"
                 className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary pl-1"
-                type="password"
               />
               <input
                 placeholder={t("signUp.password")}
@@ -70,7 +68,6 @@ const Signup = () => {
                 onChange={(event) => setPasswordTwo(event.target.value)}
                 id="signUpPassword2"
                 className="border  mb-6 mx-auto sm:mx-0 w-4/5 sm:w-full border-primary rounded  text-primary text-sm h-10 bg-secondary pl-1"
-                type="password"
               />
             </div>
 
