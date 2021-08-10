@@ -12,11 +12,11 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   // let name = 'Allan';
-  const { t } = useTranslation("navbar");
+  const { t } = useTranslation("homePage");
   return (
     <>
       <head>
-        <title>{t("navbar.Home")}</title>
+        <title>{t("homePage.title")}</title>
       </head>
       <Navbar />
       <Hero />

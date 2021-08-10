@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <head>
-        <title>{t("userProfile.userProfile")}</title>
+        <title>{t("userProfile.title")}</title>
       </head>
       <Navbar />
 

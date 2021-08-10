@@ -7,11 +7,11 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   // let name = 'Allan';
-  const { t } = useTranslation("navbar");
+  const { t } = useTranslation("resources");
   return (
     <>
       <head>
-        <title>{t("navbar.Resources")}</title>
+        <title>{t("resources.title")}</title>
       </head>
       <Navbar />
 

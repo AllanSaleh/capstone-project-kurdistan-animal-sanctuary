@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <head>
-        <title>{t("animalProfile.animalProfile")}</title>
+        <title>{t("animalProfile.title")}</title>
       </head>
       <Navbar />
 

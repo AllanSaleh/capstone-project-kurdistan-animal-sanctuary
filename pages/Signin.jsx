@@ -7,11 +7,11 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   // let name = 'Allan';
-  const { t } = useTranslation("navbar");
+  const { t } = useTranslation("signIn");
   return (
     <>
       <head>
-        <title>{t("navbar.Login")}</title>
+        <title>{t("signIn.title")}</title>
       </head>
       <Navbar />
 
