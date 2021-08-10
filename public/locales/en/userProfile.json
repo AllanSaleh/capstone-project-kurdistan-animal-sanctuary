@@ -19,6 +19,7 @@
     "no": "no",
     "close": "close",
     "submit": "submit",
-    "pics": "Upload images of your pet"
+    "pics": "Upload images of your pet",
+    "userProfile": "User Profile"
   }
 }
