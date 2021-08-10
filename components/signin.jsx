@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useAuth } from "../contexts/AuthUserContext";
 
@@ -17,8 +16,8 @@ const Signin = () => {
       .then((authUser) => {
         router.push("/UserProfile");
       })
-      .catch((error) => {
-        setError(error.message);
+      .catch((err) => {
+        setError(err.message);
       });
     event.preventDefault();
   };
