@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import Slider from "react-slick";
 import firestore from "../services/firebase";
-import PrevArrow, { NextArrow } from "./slidersArrow";
+import PrevArrow, { NextArrow } from "./SlidersArrow";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
