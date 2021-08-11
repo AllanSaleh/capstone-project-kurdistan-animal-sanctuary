@@ -32,7 +32,7 @@ const Navbar = () => {
           <Link href="./">
             <img
               className="w-12 h-12 absolute -top-2 -left-5 md:left-0 cursor-pointer md:w-16 md:h-16"
-              src="./Logo.png"
+              src="/logo.png"
               alt="Website logo "
             />
           </Link>
