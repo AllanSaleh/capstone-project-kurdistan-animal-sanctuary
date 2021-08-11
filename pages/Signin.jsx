@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navbar from "../components/Navbar";
-import Signin from "../components/signin";
+import Signin from "../components/SignIn";
 import Footer from "../components/Footer";
 
 export default function Home() {
